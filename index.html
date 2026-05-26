@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="sidebar-top">
+        <div class="brand">&#9632; Dashboard</div>
+      </div>
+      <nav class="nav">
+        <button class="nav-item active" data-section="tasks">
+          <span class="nav-icon">&#10003;</span> Tasks
+        </button>
+        <button class="nav-item" data-section="goals">
+          <span class="nav-icon">&#9651;</span> Goals
+        </button>
+        <button class="nav-item" data-section="journal">
+          <span class="nav-icon">&#9645;</span> Journal
+        </button>
+        <button class="nav-item" data-section="notes">
+          <span class="nav-icon">&#9633;</span> Notes
+        </button>
+        <button class="nav-item" data-section="ideas">
+          <span class="nav-icon">&#9675;</span> Ideas
+        </button>
+        <button class="nav-item" data-section="calendar">
+          <span class="nav-icon">&#9632;</span> Calendar
+        </button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="date-display" id="sidebarDate"></div>
+      </div>
+    </aside>
+
+    <main class="main">
+
+      <!-- TASKS -->
+      <section class="section active" id="tasks">
+        <div class="section-header">
+          <h1>Tasks</h1>
+          <span class="subtitle" id="taskCount"></span>
+        </div>
+        <div class="input-row">
+          <input type="text" id="taskInput" placeholder="Add a task..." />
+          <select id="taskPriority">
+            <option value="normal">Normal</option>
+            <option value="high">High</option>
+            <option value="low">Low</option>
+          </select>
+          <button onclick="addTask()">Add</button>
+        </div>
+        <div class="filter-row">
+          <button class="filter-btn active" onclick="filterTasks('all', this)">All</button>
+          <button class="filter-btn" onclick="filterTasks('active', this)">Active</button>
+          <button class="filter-btn" onclick="filterTasks('done', this)">Done</button>
+        </div>
+        <ul class="task-list" id="taskList"></ul>
+      </section>
+
+      <!-- GOALS -->
+      <section class="section" id="goals">
+        <div class="section-header">
+          <h1>Goals</h1>
+          <span class="subtitle">What are you working towards?</span>
+        </div>
+        <div class="input-row">
+          <input type="text" id="goalInput" placeholder="Add a goal..." />
+          <button onclick="addGoal()">Add</button>
+        </div>
+        <div class="goals-list" id="goalsList"></div>
+      </section>
+
+      <!-- JOURNAL -->
+      <section class="section" id="journal">
+        <div class="section-header">
+          <h1>Journal</h1>
+          <span class="subtitle" id="journalDate"></span>
+        </div>
+        <div class="journal-nav">
+          <button onclick="journalPrev()">&#8592;</button>
+          <span id="journalLabel"></span>
+          <button onclick="journalNext()">&#8594;</button>
+        </div>
+        <div class="mood-row">
+          <span class="mood-label">Mood</span>
+          <div class="mood-options" id="moodOptions">
+            <button class="mood-btn" data-mood="great" onclick="setMood('great')">&#128513; Great</button>
+            <button class="mood-btn" data-mood="good" onclick="setMood('good')">&#128512; Good</button>
+            <button class="mood-btn" data-mood="okay" onclick="setMood('okay')">&#128528; Okay</button>
+            <button class="mood-btn" data-mood="bad" onclick="setMood('bad')">&#128542; Bad</button>
+          </div>
+        </div>
+        <textarea id="journalEntry" placeholder="Write about your day..."></textarea>
+        <button class="save-btn" onclick="saveJournal()">Save Entry</button>
+        <div class="saved-msg" id="journalSaved"></div>
+      </section>
+
+      <!-- NOTES -->
+      <section class="section" id="notes">
+        <div class="section-header">
+          <h1>Notes</h1>
+        </div>
+        <div class="notes-layout">
+          <div class="notes-sidebar">
+            <div class="input-row" style="flex-direction:column;gap:0.5rem;">
+              <input type="text" id="noteTitleInput" placeholder="Note title..." />
+              <button onclick="newNote()" style="width:100%">New Note</button>
+            </div>
+            <ul class="notes-list" id="notesList"></ul>
+          </div>
+          <div class="notes-editor">
+            <div class="note-title-display" id="noteTitleDisplay">Select a note</div>
+            <textarea id="noteContent" placeholder="Start writing..." oninput="autoSaveNote()"></textarea>
+          </div>
+        </div>
+      </section>
+
+      <!-- IDEAS -->
+      <section class="section" id="ideas">
+        <div class="section-header">
+          <h1>Ideas</h1>
+          <span class="subtitle">Capture everything</span>
+        </div>
+        <div class="input-row">
+          <input type="text" id="ideaInput" placeholder="What's the idea?" />
+          <button onclick="addIdea()">Capture</button>
+        </div>
+        <div class="ideas-grid" id="ideasGrid"></div>
+      </section>
+
+      <!-- CALENDAR -->
+      <section class="section" id="calendar">
+        <div class="section-header">
+          <h1>Calendar</h1>
+        </div>
+        <div class="cal-nav">
+          <button onclick="calPrev()">&#8592;</button>
+          <span id="calLabel"></span>
+          <button onclick="calNext()">&#8594;</button>
+        </div>
+        <div class="cal-grid" id="calGrid"></div>
+        <div class="cal-event-panel" id="calEventPanel" style="display:none">
+          <div class="cal-event-date" id="calEventDate"></div>
+          <div class="input-row">
+            <input type="text" id="calEventInput" placeholder="Add event..." />
+            <button onclick="addCalEvent()">Add</button>
+          </div>
+          <ul class="cal-events-list" id="calEventsList"></ul>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
