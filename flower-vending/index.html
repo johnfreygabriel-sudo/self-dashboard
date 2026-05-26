@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BloomBox &mdash; Flower Vending Machines</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <div class="logo">&#127800; BloomBox</div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#how">How It Works</a></li>
+        <li><a href="#flowers">Flowers</a></li>
+        <li><a href="#locations">Locations</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact" class="nav-cta">Get a Machine</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">&#9776;</button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#about">About</a>
+      <a href="#how">How It Works</a>
+      <a href="#flowers">Flowers</a>
+      <a href="#locations">Locations</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Get a Machine</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <div class="hero-badge">&#10024; Fresh &bull; 24/7 &bull; Local</div>
+      <h1 class="hero-title">Fresh Flowers,<br /><span class="accent">Any&shy;time.</span></h1>
+      <p class="hero-sub">
+        BloomBox vending machines bring boutique-quality flowers to hospitals,
+        airports, hotels, and your neighborhood&nbsp;&mdash; around the clock.
+      </p>
+      <div class="hero-actions">
+        <a href="#how" class="btn btn-primary">See How It Works</a>
+        <a href="#locations" class="btn btn-ghost">Find a Machine</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="bloom-card bc1">
+        <div class="bloom-icon">&#127826;</div>
+        <div>Roses</div>
+      </div>
+      <div class="bloom-card bc2">
+        <div class="bloom-icon">&#127835;</div>
+        <div>Sunflowers</div>
+      </div>
+      <div class="bloom-card bc3">
+        <div class="bloom-icon">&#127800;</div>
+        <div>Tulips</div>
+      </div>
+      <div class="bloom-card bc4">
+        <div class="bloom-icon">&#127807;</div>
+        <div>Bouquets</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats">
+    <div class="container stats-grid">
+      <div class="stat">
+        <div class="stat-num">500<span>+</span></div>
+        <div class="stat-label">Machines Deployed</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">24<span>/7</span></div>
+        <div class="stat-label">Always Open</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">48h</div>
+        <div class="stat-label">Max Flower Age</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">30<span>+</span></div>
+        <div class="stat-label">Flower Varieties</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section about" id="about">
+    <div class="container about-grid">
+      <div class="about-text">
+        <span class="section-label">What is BloomBox?</span>
+        <h2>A florist in a machine &mdash; without the florist hours</h2>
+        <p>
+          BloomBox is a network of refrigerated flower vending machines stocked
+          fresh every 48 hours. Each machine holds up to 200 individual stems and
+          pre-made bouquets, kept at the perfect temperature so every petal
+          arrives in perfect condition.
+        </p>
+        <p>
+          Whether it&apos;s a last-minute anniversary gift, a &ldquo;thinking of
+          you&rdquo; bundle, or a single stem to brighten someone&apos;s day
+          &mdash; BloomBox is there when traditional florists are not.
+        </p>
+        <ul class="check-list">
+          <li>&#10003; Refrigerated to 4&deg;C for maximum freshness</li>
+          <li>&#10003; Contactless card &amp; mobile pay</li>
+          <li>&#10003; Sourced from local &amp; sustainable farms</li>
+          <li>&#10003; Real-time inventory on the BloomBox app</li>
+        </ul>
+      </div>
+      <div class="about-visual">
+        <div class="machine-mockup">
+          <div class="machine-screen">
+            <div class="machine-header">BloomBox</div>
+            <div class="machine-slots">
+              <div class="slot occupied">&#127826;</div>
+              <div class="slot occupied">&#127835;</div>
+              <div class="slot occupied">&#127800;</div>
+              <div class="slot occupied">&#127807;</div>
+              <div class="slot occupied">&#127826;</div>
+              <div class="slot empty"></div>
+              <div class="slot occupied">&#127835;</div>
+              <div class="slot occupied">&#127800;</div>
+              <div class="slot occupied">&#127826;</div>
+            </div>
+            <div class="machine-price">From $8.99</div>
+          </div>
+          <div class="machine-body"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="section how" id="how">
+    <div class="container">
+      <span class="section-label">Simple as 1, 2, 3</span>
+      <h2>How It Works</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">01</div>
+          <div class="step-icon">&#128205;</div>
+          <h3>Find a Machine</h3>
+          <p>Use the BloomBox app or website to locate the nearest machine. We&apos;re in hospitals, airports, hotels, gyms, and grocery stores.</p>
+        </div>
+        <div class="step-arrow">&#8594;</div>
+        <div class="step">
+          <div class="step-num">02</div>
+          <div class="step-icon">&#128144;</div>
+          <h3>Pick Your Blooms</h3>
+          <p>Browse the touchscreen display, view real-time stock and prices, and choose a single stem, a bundle, or a full bouquet.</p>
+        </div>
+        <div class="step-arrow">&#8594;</div>
+        <div class="step">
+          <div class="step-num">03</div>
+          <div class="step-icon">&#127873;</div>
+          <h3>Pay &amp; Enjoy</h3>
+          <p>Tap your card, phone, or watch. Your flowers drop into the collection tray fresh, wrapped, and ready to give or keep.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FLOWER TYPES -->
+  <section class="section flowers" id="flowers">
+    <div class="container">
+      <span class="section-label">Our Selection</span>
+      <h2>What&apos;s Inside the Machine</h2>
+      <div class="flowers-grid">
+        <div class="flower-card">
+          <div class="flower-emoji">&#127826;</div>
+          <h3>Roses</h3>
+          <p>Red, pink, white, yellow &amp; bi-color. Single stems, half-dozens, or classic dozens.</p>
+          <div class="flower-price">From $6.99</div>
+        </div>
+        <div class="flower-card featured">
+          <div class="featured-badge">Best Seller</div>
+          <div class="flower-emoji">&#127807;</div>
+          <h3>Mixed Bouquets</h3>
+          <p>Professionally arranged, wrapped in kraft paper. Changes seasonally with the freshest local picks.</p>
+          <div class="flower-price">From $18.99</div>
+        </div>
+        <div class="flower-card">
+          <div class="flower-emoji">&#127835;</div>
+          <h3>Sunflowers</h3>
+          <p>Cheerful giants bursting with color. Perfect for birthdays, get-well wishes, or just because.</p>
+          <div class="flower-price">From $5.99</div>
+        </div>
+        <div class="flower-card">
+          <div class="flower-emoji">&#127800;</div>
+          <h3>Tulips</h3>
+          <p>Spring&apos;s favorite bloom, available year-round. Comes in every shade of the rainbow.</p>
+          <div class="flower-price">From $7.99</div>
+        </div>
+        <div class="flower-card">
+          <div class="flower-emoji">&#127804;</div>
+          <h3>Lilies</h3>
+          <p>Elegant &amp; fragrant. Oriental and Asiatic varieties, perfect for sympathy or celebrations.</p>
+          <div class="flower-price">From $8.99</div>
+        </div>
+        <div class="flower-card">
+          <div class="flower-emoji">&#127825;</div>
+          <h3>Succulents</h3>
+          <p>Low-maintenance, long-lasting. Potted in recyclable containers &mdash; a gift that keeps growing.</p>
+          <div class="flower-price">From $9.99</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATIONS -->
+  <section class="section locations" id="locations">
+    <div class="container">
+      <span class="section-label">Where to Find Us</span>
+      <h2>BloomBox Is Everywhere You Are</h2>
+      <div class="locations-grid">
+        <div class="location-item">
+          <div class="loc-icon">&#9992;&#65039;</div>
+          <h3>Airports</h3>
+          <p>Gate-side machines at 40+ major airports. Never forget a homecoming gift again.</p>
+        </div>
+        <div class="location-item">
+          <div class="loc-icon">&#127973;</div>
+          <h3>Hospitals</h3>
+          <p>Conveniently placed in lobbies and waiting areas so visitors always arrive with flowers.</p>
+        </div>
+        <div class="location-item">
+          <div class="loc-icon">&#127970;</div>
+          <h3>Hotels</h3>
+          <p>Lobby machines for a romantic surprise or a warm welcome to a room.</p>
+        </div>
+        <div class="location-item">
+          <div class="loc-icon">&#127965;</div>
+          <h3>Shopping Centers</h3>
+          <p>In high-footfall corridors so you can grab blooms during your regular errands.</p>
+        </div>
+        <div class="location-item">
+          <div class="loc-icon">&#127967;</div>
+          <h3>Gyms &amp; Spas</h3>
+          <p>Self-care bundles and single stems for a post-workout treat or a thoughtful gift.</p>
+        </div>
+        <div class="location-item">
+          <div class="loc-icon">&#127968;</div>
+          <h3>Neighborhoods</h3>
+          <p>Residential BloomBox kiosks bring the florist directly to your apartment building or suburb.</p>
+        </div>
+      </div>
+      <div class="map-placeholder">
+        <div class="map-inner">
+          <span>&#128205;</span> Interactive map &mdash; 500+ machines across the country
+          <br />
+          <a href="#contact" class="btn btn-primary" style="margin-top:1.2rem;display:inline-block;">Request a Machine Near You</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section testimonials">
+    <div class="container">
+      <span class="section-label">Real Stories</span>
+      <h2>People Love BloomBox</h2>
+      <div class="testi-grid">
+        <div class="testi-card">
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>&ldquo;I completely forgot our anniversary and spotted a BloomBox in the hospital lobby where I work. Saved my life &mdash; and my marriage.&rdquo;</p>
+          <div class="testi-author">
+            <div class="avatar">MR</div>
+            <div>
+              <div class="author-name">Marcus R.</div>
+              <div class="author-role">Emergency Nurse, Chicago</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card featured-testi">
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>&ldquo;As a hotel manager I installed two machines in our lobby. Guests love them, and it&apos;s become a genuine revenue stream. The flowers are always fresh.&rdquo;</p>
+          <div class="testi-author">
+            <div class="avatar">SL</div>
+            <div>
+              <div class="author-name">Sophia L.</div>
+              <div class="author-role">General Manager, The Marquette Hotel</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>&ldquo;My flight was delayed 4 hours. I bought myself a sunflower bouquet from the airport BloomBox, and it genuinely made the wait so much better.&rdquo;</p>
+          <div class="testi-author">
+            <div class="avatar">AT</div>
+            <div>
+              <div class="author-name">Aisha T.</div>
+              <div class="author-role">Frequent Traveler, NYC</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section faq" id="faq">
+    <div class="container faq-container">
+      <span class="section-label">Got Questions?</span>
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            How fresh are the flowers? <span class="faq-arrow">&#8250;</span>
+          </button>
+          <div class="faq-a">
+            Every machine is restocked within 48 hours, and our refrigeration units maintain a constant 4&deg;C. Flowers are cut-to-order at our partner farms, rushed to distribution hubs, and loaded into machines within 24 hours of cutting. You can always check the stocking date on the machine&apos;s screen.
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            What payment methods are accepted? <span class="faq-arrow">&#8250;</span>
+          </button>
+          <div class="faq-a">
+            All BloomBox machines accept credit/debit cards, Apple Pay, Google Pay, and Samsung Pay via NFC tap. We do not accept cash. Some machines also support BloomBox app credits which you can top up online.
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            What if a flower is damaged when dispensed? <span class="faq-arrow">&#8250;</span>
+          </button>
+          <div class="faq-a">
+            Snap a photo and submit a refund request through the BloomBox app or website within 24 hours. We process full refunds within one business day &mdash; no questions asked. We take pride in the quality of every bloom.
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            How can I get a BloomBox machine for my venue? <span class="faq-arrow">&#8250;</span>
+          </button>
+          <div class="faq-a">
+            Fill in the form in our &ldquo;Get a Machine&rdquo; section below. We partner with venues at zero upfront cost &mdash; BloomBox covers installation and maintenance. You earn a revenue share from every sale. Locations with 200+ daily foot traffic qualify.
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            Are the flowers sustainably sourced? <span class="faq-arrow">&#8250;</span>
+          </button>
+          <div class="faq-a">
+            We partner exclusively with Rainforest Alliance&ndash;certified farms and prioritize local growers within 150 miles where possible. Our packaging is 100% compostable, and unsold flowers are donated to local charities and care homes before restocking.
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            Can I pre-order or schedule a pickup? <span class="faq-arrow">&#8250;</span>
+          </button>
+          <div class="faq-a">
+            Yes! Through the BloomBox app you can reserve a bouquet at a specific machine for up to 4 hours. Scheduled pickups are also available &mdash; pick a machine, pick a time, and we&apos;ll make sure your flowers are ready and waiting.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA / CONTACT -->
+  <section class="section contact" id="contact">
+    <div class="container contact-grid">
+      <div class="contact-text">
+        <span class="section-label">Partner With Us</span>
+        <h2>Bring BloomBox to Your Venue</h2>
+        <p>
+          Zero upfront costs. We install, maintain, and restock the machine.
+          You earn a percentage of every sale. It&apos;s a win-win that turns
+          empty lobby corners into a delightful experience for your guests.
+        </p>
+        <ul class="check-list">
+          <li>&#10003; Free installation &amp; hardware</li>
+          <li>&#10003; We handle all restocking &amp; maintenance</li>
+          <li>&#10003; Revenue share from day one</li>
+          <li>&#10003; Dedicated account manager</li>
+        </ul>
+      </div>
+      <form class="contact-form" onsubmit="handleSubmit(event)">
+        <h3>Request a Machine</h3>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" placeholder="Jane" required />
+          </div>
+          <div class="form-group">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" placeholder="Smith" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="jane@venue.com" required />
+        </div>
+        <div class="form-group">
+          <label for="venue">Venue Type</label>
+          <select id="venue" required>
+            <option value="">Select venue type&hellip;</option>
+            <option>Hospital / Medical Center</option>
+            <option>Airport / Transit Hub</option>
+            <option>Hotel / Resort</option>
+            <option>Shopping Center / Retail</option>
+            <option>Gym / Spa / Wellness</option>
+            <option>Office / Corporate</option>
+            <option>Residential Complex</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="traffic">Estimated Daily Foot Traffic</label>
+          <select id="traffic">
+            <option value="">Select range&hellip;</option>
+            <option>Under 200</option>
+            <option>200 &ndash; 500</option>
+            <option>500 &ndash; 2,000</option>
+            <option>2,000 &ndash; 10,000</option>
+            <option>10,000+</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Anything else?</label>
+          <textarea id="message" rows="3" placeholder="Tell us about your location&hellip;"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%">Send Request</button>
+        <div class="form-success" id="formSuccess">&#10003; Thanks! We&apos;ll be in touch within 24 hours.</div>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="logo">&#127800; BloomBox</div>
+        <p>Fresh flowers, delivered by machine. Making every moment a little more beautiful.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Instagram">&#128247;</a>
+          <a href="#" aria-label="Twitter">&#128038;</a>
+          <a href="#" aria-label="Facebook">&#128172;</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#">Sustainability</a></li>
+          <li><a href="#">Press</a></li>
+          <li><a href="#">Careers</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Partner</h4>
+        <ul>
+          <li><a href="#contact">Get a Machine</a></li>
+          <li><a href="#">Farm Partners</a></li>
+          <li><a href="#">Franchise</a></li>
+          <li><a href="#">B2B Gifting</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Find Flowers</h4>
+        <ul>
+          <li><a href="#locations">Machine Locator</a></li>
+          <li><a href="#">Download the App</a></li>
+          <li><a href="#">Schedule Pickup</a></li>
+          <li><a href="#">Gift Cards</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        &copy; 2026 BloomBox Inc. &bull; <a href="#">Privacy Policy</a> &bull; <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Sticky nav shadow
+    window.addEventListener('scroll', () => {
+      document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 20);
+    });
+
+    // Hamburger menu
+    document.getElementById('hamburger').addEventListener('click', () => {
+      document.getElementById('mobileMenu').classList.toggle('open');
+    });
+
+    // Close mobile menu on link click
+    document.querySelectorAll('#mobileMenu a').forEach(a => {
+      a.addEventListener('click', () => document.getElementById('mobileMenu').classList.remove('open'));
+    });
+
+    // FAQ accordion
+    function toggleFaq(btn) {
+      const item = btn.parentElement;
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    }
+
+    // Form submit
+    function handleSubmit(e) {
+      e.preventDefault();
+      document.getElementById('formSuccess').style.display = 'block';
+      e.target.querySelector('button[type=submit]').disabled = true;
+    }
+
+    // Scroll-in animation
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.step, .flower-card, .location-item, .testi-card, .stat').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
