@@ -818,8 +818,7 @@ h3 {
 }
 
 @media (max-width: 900px) {
-  .nav-links { display: none; }
-  .nav-links.open {
+  .nav-links {
     display: flex;
     flex-direction: column;
     position: fixed;
@@ -832,12 +831,19 @@ h3 {
     justify-content: center;
     gap: 32px;
     z-index: 99;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
   }
-  .nav-links.open a {
+  .nav-links.open {
+    opacity: 1;
+    visibility: visible;
+  }
+  .nav-links a {
     font-size: 1.4rem;
     font-weight: 700;
   }
-  .nav-toggle { display: flex; }
+  .nav-toggle { display: flex; z-index: 101; }
   .nav-cta { display: none; }
 
   .hero {

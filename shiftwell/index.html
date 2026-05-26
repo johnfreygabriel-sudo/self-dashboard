@@ -290,9 +290,14 @@
     const navToggle = document.getElementById('navToggle');
     const navLinks = document.getElementById('navLinks');
 
+    function setMenuOpen(open) {
+      navLinks.classList.toggle('open', open);
+      navToggle.classList.toggle('active', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    }
+
     navToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('open');
-      navToggle.classList.toggle('active');
+      setMenuOpen(!navLinks.classList.contains('open'));
     });
 
     document.querySelectorAll('a[href^="#"]').forEach(a => {
@@ -302,9 +307,8 @@
         const target = document.querySelector(id);
         if (!target) return;
         e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth' });
-        navLinks.classList.remove('open');
-        navToggle.classList.remove('active');
+        setMenuOpen(false);
+        setTimeout(() => target.scrollIntoView({ behavior: 'smooth' }), 10);
       });
     });
 
