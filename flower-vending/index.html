@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BloomBox &mdash; Premium Flower Locker Machines</title>
+  <title>BloomBox &mdash; Flower Vending Machines</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -16,45 +16,60 @@
     <div class="nav-inner">
       <div class="logo">&#127800; BloomBox</div>
       <ul class="nav-links">
-        <li><a href="#about">About</a></li>
+        <li><a href="#about">What Is It?</a></li>
         <li><a href="#how">How It Works</a></li>
-        <li><a href="#machines">The Machine</a></li>
+        <li><a href="#facts">Facts</a></li>
         <li><a href="#locations">Locations</a></li>
         <li><a href="#faq">FAQ</a></li>
-        <li><a href="#contact" class="nav-cta">Get a Machine</a></li>
+        <li><a href="#contact" class="nav-cta">Get In Touch</a></li>
       </ul>
       <button class="hamburger" id="hamburger" aria-label="Menu">&#9776;</button>
     </div>
     <div class="mobile-menu" id="mobileMenu">
-      <a href="#about">About</a>
+      <a href="#about">What Is It?</a>
       <a href="#how">How It Works</a>
-      <a href="#machines">The Machine</a>
+      <a href="#facts">Facts</a>
       <a href="#locations">Locations</a>
       <a href="#faq">FAQ</a>
-      <a href="#contact">Get a Machine</a>
+      <a href="#contact">Get In Touch</a>
     </div>
   </nav>
 
   <!-- HERO -->
-  <section class="hero" id="hero">
-    <div class="hero-bg"></div>
+  <section class="hero">
     <div class="hero-content">
-      <div class="hero-badge">&#10024; Premium &bull; Refrigerated &bull; 24/7</div>
-      <h1 class="hero-title">Boutique Flowers.<br /><span class="accent">In a Locker.</span></h1>
+      <div class="hero-badge">&#127800; The Future of Flowers</div>
+      <h1>Flower Vending<br /><span class="accent">Machines</span></h1>
       <p class="hero-sub">
-        BloomBox is a sleek, refrigerated flower locker machine that displays
-        hand-arranged bouquets behind glass &mdash; available around the clock,
-        wherever your customers are.
+        Fresh, refrigerated bouquets available 24 hours a day &mdash; no florist needed.
+        Discover how glass-locker flower machines are changing the way people buy blooms.
       </p>
       <div class="hero-actions">
-        <a href="#how" class="btn btn-primary">See How It Works</a>
-        <a href="#machines" class="btn btn-ghost">View the Machine</a>
+        <a href="#about" class="btn btn-primary">Learn More</a>
+        <a href="#contact" class="btn btn-ghost">Contact Us</a>
       </div>
     </div>
     <div class="hero-visual">
-      <div class="hero-img-wrap">
-        <img src="machine.jpg" alt="BloomBox flower locker machine" class="hero-machine-img" />
-        <div class="hero-img-badge">&#127800; Available 24/7</div>
+      <div class="machine-photo">
+        <img
+          src="machine.jpg"
+          alt="Flower vending machine with glass compartments"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
+        />
+        <div class="machine-fallback" style="display:none">
+          <div class="fallback-grid">
+            <div class="fg-cell large"><span>&#127807;</span><small>Bouquet</small></div>
+            <div class="fg-cell large"><span>&#127826;</span><small>Roses</small></div>
+            <div class="fg-cell medium"><span>&#127835;</span></div>
+            <div class="fg-cell medium"><span>&#127804;</span></div>
+            <div class="fg-cell medium"><span>&#127800;</span></div>
+            <div class="fg-cell small"><span>&#127826;</span></div>
+            <div class="fg-cell small open"><small>OPEN</small></div>
+            <div class="fg-cell small"><span>&#127807;</span></div>
+          </div>
+          <div class="fallback-label">BloomBox</div>
+        </div>
+        <div class="photo-tag">Available 24/7 &#183; Refrigerated &#183; Fresh</div>
       </div>
     </div>
   </section>
@@ -63,53 +78,61 @@
   <section class="stats">
     <div class="container stats-grid">
       <div class="stat">
-        <div class="stat-num">9</div>
-        <div class="stat-label">Compartments Per Machine</div>
+        <div class="stat-num">24<span>/7</span></div>
+        <div class="stat-label">Always Open</div>
       </div>
       <div class="stat">
-        <div class="stat-num">24<span>/7</span></div>
-        <div class="stat-label">Always Accessible</div>
+        <div class="stat-num">9</div>
+        <div class="stat-label">Compartments</div>
       </div>
       <div class="stat">
         <div class="stat-num">4<span>&deg;C</span></div>
-        <div class="stat-label">Refrigerated Compartments</div>
+        <div class="stat-label">Kept Refrigerated</div>
       </div>
       <div class="stat">
         <div class="stat-num">48<span>h</span></div>
-        <div class="stat-label">Max Bouquet Age</div>
+        <div class="stat-label">Freshness Guarantee</div>
       </div>
     </div>
   </section>
 
-  <!-- ABOUT -->
+  <!-- WHAT IS IT -->
   <section class="section about" id="about">
     <div class="container about-grid">
-      <div class="about-text">
-        <span class="section-label">What is BloomBox?</span>
-        <h2>A glass-front flower locker &mdash; not a vending machine</h2>
-        <p>
-          Unlike traditional vending machines, a BloomBox unit is a
-          floor-standing cabinet of individually refrigerated locker compartments,
-          each with a glass door so customers can see exactly what they&apos;re
-          buying before they pay.
-        </p>
-        <p>
-          Bouquets are hand-arranged, placed upright in water-filled vases or
-          wrapped in kraft paper, and kept at 4&deg;C. When a customer selects
-          and pays, just that one door unlocks &mdash; the rest stay secure.
-        </p>
-        <ul class="check-list">
-          <li>&#10003; Glass-front display &mdash; see before you buy</li>
-          <li>&#10003; Individual locker doors, PIN or card unlocked</li>
-          <li>&#10003; Each compartment independently refrigerated</li>
-          <li>&#10003; Sleek matte-black powder-coated steel cabinet</li>
-          <li>&#10003; Wheeled base &mdash; easy to reposition indoors</li>
-          <li>&#10003; Contactless card, Apple Pay &amp; Google Pay</li>
-        </ul>
+      <div class="about-img">
+        <div class="photo-frame">
+          <img
+            src="machine.jpg"
+            alt="Flower vending locker machine"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='block'"
+          />
+          <div class="photo-placeholder" style="display:none">
+            <span>&#127807;</span>
+            <p>Glass-front flower locker</p>
+          </div>
+        </div>
       </div>
-      <div class="about-visual">
-        <div class="about-img-wrap">
-          <img src="machine.jpg" alt="BloomBox flower locker machine up close" class="about-machine-img" />
+      <div class="about-text">
+        <span class="section-label">What Is It?</span>
+        <h2>Not your average vending machine</h2>
+        <p>
+          A flower vending machine is a refrigerated, glass-front locker cabinet
+          stocked with hand-arranged bouquets and individual stems. Each
+          compartment has its own glass door so you can see exactly what
+          you&apos;re buying.
+        </p>
+        <p>
+          When you pay, just that one door unlocks. You open it, take your
+          flowers, and you&apos;re done. The whole thing takes under a minute &mdash;
+          day or night, with no staff required.
+        </p>
+        <div class="pill-list">
+          <span class="pill">&#127829; Glass-front compartments</span>
+          <span class="pill">&#10052; Refrigerated inside</span>
+          <span class="pill">&#128242; Touchscreen + contactless pay</span>
+          <span class="pill">&#127881; 24-hour access</span>
+          <span class="pill">&#9854; No staff needed</span>
+          <span class="pill">&#9855; Wheeled &amp; repositionable</span>
         </div>
       </div>
     </div>
@@ -118,169 +141,93 @@
   <!-- HOW IT WORKS -->
   <section class="section how" id="how">
     <div class="container">
-      <span class="section-label">Dead Simple</span>
+      <span class="section-label">Simple Process</span>
       <h2>How It Works</h2>
       <div class="steps">
         <div class="step">
-          <div class="step-num">01</div>
-          <div class="step-icon">&#128064;</div>
-          <h3>Browse Through the Glass</h3>
-          <p>Walk up and see every bouquet on display in its own lit, refrigerated compartment. No guessing &mdash; what you see is exactly what you get.</p>
+          <div class="step-circle">&#128064;</div>
+          <h3>Look Through the Glass</h3>
+          <p>Browse every bouquet in its own lit compartment before you commit. No mystery &mdash; you see the actual flowers.</p>
         </div>
-        <div class="step-arrow">&#8594;</div>
+        <div class="step-line"></div>
         <div class="step">
-          <div class="step-num">02</div>
-          <div class="step-icon">&#128242;</div>
-          <h3>Select &amp; Pay</h3>
-          <p>Tap the compartment number on the touchscreen, see the price and flower details, then pay by card tap, Apple Pay, or Google Pay.</p>
+          <div class="step-circle">&#128242;</div>
+          <h3>Tap &amp; Pay</h3>
+          <p>Select your compartment on the touchscreen and pay by card or phone. The whole process takes seconds.</p>
         </div>
-        <div class="step-arrow">&#8594;</div>
+        <div class="step-line"></div>
         <div class="step">
-          <div class="step-num">03</div>
-          <div class="step-icon">&#128275;</div>
-          <h3>Door Unlocks &mdash; Take Your Flowers</h3>
-          <p>Just that one compartment door clicks open. Lift out your bouquet, close the door behind you, and you&apos;re done. The rest stay locked and secure.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- THE MACHINE -->
-  <section class="section machines" id="machines">
-    <div class="container">
-      <span class="section-label">Hardware</span>
-      <h2>Built to Impress, Built to Last</h2>
-      <div class="specs-grid">
-        <div class="spec-card">
-          <div class="spec-icon">&#128736;</div>
-          <h3>Matte-Black Steel Cabinet</h3>
-          <p>Powder-coated mild steel with anti-fingerprint coating. Looks as good after a year as it does on day one.</p>
-        </div>
-        <div class="spec-card">
-          <div class="spec-icon">&#10052;</div>
-          <h3>9 Independent Compartments</h3>
-          <p>3 large (full bouquets), 3 medium (bundles), 3 small (single stems). Each independently cooled to 4&deg;C.</p>
-        </div>
-        <div class="spec-card">
-          <div class="spec-icon">&#128247;</div>
-          <h3>Full Glass Doors</h3>
-          <p>Tempered glass panels with interior LED strip lighting so every arrangement is beautifully lit and clearly visible.</p>
-        </div>
-        <div class="spec-card">
-          <div class="spec-icon">&#128246;</div>
-          <h3>7&Prime; Touchscreen + NFC Reader</h3>
-          <p>Embedded between the top-row compartments. Shows pricing, flower info, and handles contactless payments.</p>
-        </div>
-        <div class="spec-card">
-          <div class="spec-icon">&#128241;</div>
-          <h3>Remote Management</h3>
-          <p>Monitor stock levels, unlock doors remotely, and get low-inventory alerts via the BloomBox operator app.</p>
-        </div>
-        <div class="spec-card">
-          <div class="spec-icon">&#9881;</div>
-          <h3>Wheeled &amp; Plug-In</h3>
-          <p>Locking castors for easy repositioning indoors. Standard 240V plug &mdash; no special installation needed.</p>
-        </div>
-      </div>
-      <div class="dimensions-bar">
-        <div class="dim">
-          <div class="dim-val">180cm</div>
-          <div class="dim-label">Height</div>
-        </div>
-        <div class="dim-sep"></div>
-        <div class="dim">
-          <div class="dim-val">130cm</div>
-          <div class="dim-label">Width</div>
-        </div>
-        <div class="dim-sep"></div>
-        <div class="dim">
-          <div class="dim-val">55cm</div>
-          <div class="dim-label">Depth</div>
-        </div>
-        <div class="dim-sep"></div>
-        <div class="dim">
-          <div class="dim-val">240V</div>
-          <div class="dim-label">Power</div>
-        </div>
-        <div class="dim-sep"></div>
-        <div class="dim">
-          <div class="dim-val">4G + Wi-Fi</div>
-          <div class="dim-label">Connectivity</div>
+          <div class="step-circle">&#128275;</div>
+          <h3>Door Opens &mdash; Take Your Flowers</h3>
+          <p>Just that one door clicks open. Lift out your bouquet, close the door, done. Fresh flowers in under a minute.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- PHOTO GALLERY -->
-  <section class="section gallery" id="gallery">
+  <section class="section gallery">
     <div class="container">
-      <span class="section-label">See It In Person</span>
-      <h2>The Machine, Up Close</h2>
+      <span class="section-label">See It For Yourself</span>
+      <h2>Inside a Flower Vending Machine</h2>
       <div class="gallery-grid">
-        <div class="gallery-main">
-          <img src="machine.jpg" alt="BloomBox flower locker machine full view" />
-          <div class="gallery-caption">Full cabinet &mdash; 9 individually lit compartments</div>
+        <div class="g-cell main-cell">
+          <img src="machine.jpg" alt="Full flower vending machine"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+          <div class="g-placeholder" style="display:none"><span>&#127807;</span><p>Full cabinet view</p></div>
+          <div class="g-label">The full cabinet &mdash; 9 individually lit compartments</div>
         </div>
-        <div class="gallery-side">
-          <div class="gallery-thumb">
-            <img src="machine.jpg" alt="Top row wrapped bouquets" />
-            <div class="gallery-caption">Top row &mdash; large wrapped bouquets</div>
-          </div>
-          <div class="gallery-thumb">
-            <img src="machine.jpg" alt="Middle row vase arrangements" />
-            <div class="gallery-caption">Middle row &mdash; flowers in vases</div>
-          </div>
-          <div class="gallery-thumb">
-            <img src="machine.jpg" alt="Lower compartments single stems" />
-            <div class="gallery-caption">Lower row &mdash; single stems &amp; small bundles</div>
-          </div>
+        <div class="g-cell side-cell">
+          <img src="machine.jpg" alt="Wrapped bouquets in top row"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" style="object-position: top" />
+          <div class="g-placeholder" style="display:none"><span>&#127826;</span><p>Top row bouquets</p></div>
+          <div class="g-label">Wrapped bouquets in large top compartments</div>
+        </div>
+        <div class="g-cell side-cell">
+          <img src="machine.jpg" alt="Flowers in vases in middle row"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" style="object-position: center" />
+          <div class="g-placeholder" style="display:none"><span>&#127835;</span><p>Vase arrangements</p></div>
+          <div class="g-label">Flowers in vases &mdash; middle compartments</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- WHAT'S INSIDE -->
-  <section class="section flowers" id="flowers">
+  <!-- INTERESTING FACTS -->
+  <section class="section facts" id="facts">
     <div class="container">
-      <span class="section-label">The Bouquets</span>
-      <h2>Hand-Arranged, Every 48 Hours</h2>
-      <div class="flowers-grid">
-        <div class="flower-card">
-          <div class="flower-emoji">&#127807;</div>
-          <h3>Signature Wrapped Bouquets</h3>
-          <p>Kraft-paper wrapped mixed arrangements &mdash; the large top-row compartments are made for these show-stopping bundles.</p>
-          <div class="flower-price">From $24.99</div>
+      <span class="section-label">Did You Know?</span>
+      <h2>Interesting Facts</h2>
+      <div class="facts-grid">
+        <div class="fact-card">
+          <div class="fact-num">01</div>
+          <h3>They started in Japan</h3>
+          <p>Japan has had flower vending machines since the 1990s, particularly at train stations where commuters pick up flowers on the way home.</p>
         </div>
-        <div class="flower-card featured">
-          <div class="featured-badge">Best Seller</div>
-          <div class="flower-emoji">&#127826;</div>
-          <h3>Dozen Roses</h3>
-          <p>Classic red, romantic pink, or pure white. Displayed upright in the large compartments, stems in water.</p>
-          <div class="flower-price">From $34.99</div>
+        <div class="fact-card">
+          <div class="fact-num">02</div>
+          <h3>Flowers stay fresh longer than you think</h3>
+          <p>The 4&deg;C refrigerated compartments slow cell breakdown in cut flowers, often keeping them fresh for 5&ndash;7 days after purchase.</p>
         </div>
-        <div class="flower-card">
-          <div class="flower-emoji">&#127835;</div>
-          <h3>Sunflower Bundles</h3>
-          <p>Bright and cheerful arrangements in the medium compartments. A guaranteed mood-lifter.</p>
-          <div class="flower-price">From $18.99</div>
+        <div class="fact-card">
+          <div class="fact-num">03</div>
+          <h3>The busiest hours are late evening</h3>
+          <p>Most flower vending machine sales happen between 6pm and 10pm &mdash; when traditional florists are closed but people still need flowers.</p>
         </div>
-        <div class="flower-card">
-          <div class="flower-emoji">&#127804;</div>
-          <h3>Lily Arrangements</h3>
-          <p>Elegant oriental lilies in vases, perfectly suited to the glass display for maximum visual impact.</p>
-          <div class="flower-price">From $22.99</div>
+        <div class="fact-card">
+          <div class="fact-num">04</div>
+          <h3>Hospitals are the top location</h3>
+          <p>Hospital lobbies consistently see the highest flower machine sales. Visitors arriving at any hour can always bring something thoughtful.</p>
         </div>
-        <div class="flower-card">
-          <div class="flower-emoji">&#127800;</div>
-          <h3>Single Stems</h3>
-          <p>Individually wrapped roses, tulips, or gerberas in the small lower compartments. Perfect impulse gift.</p>
-          <div class="flower-price">From $6.99</div>
+        <div class="fact-card">
+          <div class="fact-num">05</div>
+          <h3>Zero-waste restocking</h3>
+          <p>Unsold flowers nearing the 48-hour mark are donated to care homes and charities before restocking, so nothing goes to waste.</p>
         </div>
-        <div class="flower-card">
-          <div class="flower-emoji">&#127825;</div>
-          <h3>Seasonal Specials</h3>
-          <p>Rotates with local harvests &mdash; peonies in spring, dahlias in autumn, amaryllis at Christmas.</p>
-          <div class="flower-price">From $19.99</div>
+        <div class="fact-card">
+          <div class="fact-num">06</div>
+          <h3>The market is growing fast</h3>
+          <p>The global flower vending machine market is expanding rapidly, driven by demand for 24/7 retail and the rise of automated convenience stores.</p>
         </div>
       </div>
     </div>
@@ -289,81 +236,50 @@
   <!-- LOCATIONS -->
   <section class="section locations" id="locations">
     <div class="container">
-      <span class="section-label">Where to Place It</span>
-      <h2>BloomBox Fits Wherever People Are</h2>
-      <p class="locations-sub">The machine is 180cm tall, 130cm wide, and runs on a standard plug &mdash; it fits in any lobby, corridor, or entrance hall.</p>
-      <div class="locations-grid">
-        <div class="location-item">
-          <div class="loc-icon">&#127967;</div>
-          <h3>Supermarkets</h3>
-          <p>High footfall entrances &mdash; perfect for impulse buys alongside the weekly shop.</p>
-        </div>
-        <div class="location-item">
+      <span class="section-label">Where You Find Them</span>
+      <h2>Common Locations</h2>
+      <p class="locations-intro">Flower vending machines are placed wherever people gather and florists can&apos;t operate around the clock.</p>
+      <div class="locations-list">
+        <div class="loc-item">
           <div class="loc-icon">&#127973;</div>
-          <h3>Hospitals</h3>
-          <p>Lobby placement means visitors always arrive with flowers, day or night.</p>
+          <div class="loc-text">
+            <h3>Hospitals &amp; Medical Centres</h3>
+            <p>The most common location. Visitors arriving at any hour can always bring flowers to patients.</p>
+          </div>
         </div>
-        <div class="location-item">
-          <div class="loc-icon">&#127970;</div>
-          <h3>Hotels</h3>
-          <p>Premium machine aesthetic matches upscale lobbies. A revenue stream that also impresses guests.</p>
+        <div class="loc-item">
+          <div class="loc-icon">&#127967;</div>
+          <div class="loc-text">
+            <h3>Supermarkets</h3>
+            <p>High foot-traffic entrances make it easy to grab a bouquet alongside the weekly shop.</p>
+          </div>
         </div>
-        <div class="location-item">
+        <div class="loc-item">
           <div class="loc-icon">&#9992;&#65039;</div>
-          <h3>Airports</h3>
-          <p>Gate-area placement for travellers who never forget a homecoming gift again.</p>
+          <div class="loc-text">
+            <h3>Airports</h3>
+            <p>Gate-side machines are popular for travellers who want to arrive home with a gift.</p>
+          </div>
         </div>
-        <div class="location-item">
+        <div class="loc-item">
+          <div class="loc-icon">&#127970;</div>
+          <div class="loc-text">
+            <h3>Hotels</h3>
+            <p>Lobby units let guests pick up flowers for a romantic gesture or welcome arrangement.</p>
+          </div>
+        </div>
+        <div class="loc-item">
           <div class="loc-icon">&#127965;</div>
-          <h3>Shopping Centres</h3>
-          <p>High-footfall corridors and food-court entrances. Visible, premium, and profitable.</p>
+          <div class="loc-text">
+            <h3>Shopping Centres</h3>
+            <p>High-footfall corridors and food courts where impulse purchases are part of the culture.</p>
+          </div>
         </div>
-        <div class="location-item">
+        <div class="loc-item">
           <div class="loc-icon">&#127968;</div>
-          <h3>Office Buildings</h3>
-          <p>Lobby units serve thousands of daily commuters &mdash; anniversary, birthday, apology sorted.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- TESTIMONIALS -->
-  <section class="section testimonials">
-    <div class="container">
-      <span class="section-label">Real Operators, Real Results</span>
-      <h2>Venue Partners Love BloomBox</h2>
-      <div class="testi-grid">
-        <div class="testi-card">
-          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p>&ldquo;We placed it at the supermarket entrance and it pays for itself every week. Customers love that they can see the bouquet before buying &mdash; no surprises.&rdquo;</p>
-          <div class="testi-author">
-            <div class="avatar">PK</div>
-            <div>
-              <div class="author-name">Peter K.</div>
-              <div class="author-role">Store Manager, Bratislava</div>
-            </div>
-          </div>
-        </div>
-        <div class="testi-card featured-testi">
-          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p>&ldquo;The machine looks stunning in our hotel lobby. Guests often comment on it. We&apos;ve had zero maintenance issues and the revenue share is genuinely worth it.&rdquo;</p>
-          <div class="testi-author">
-            <div class="avatar">ML</div>
-            <div>
-              <div class="author-name">Monika L.</div>
-              <div class="author-role">GM, Grand Hotel Praha</div>
-            </div>
-          </div>
-        </div>
-        <div class="testi-card">
-          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p>&ldquo;Our hospital visitors said the machine was a genuine comfort &mdash; being able to pick up a proper bouquet at 11pm without leaving the building meant so much.&rdquo;</p>
-          <div class="testi-author">
-            <div class="avatar">JN</div>
-            <div>
-              <div class="author-name">Jana N.</div>
-              <div class="author-role">Facilities Director, City Hospital</div>
-            </div>
+          <div class="loc-text">
+            <h3>Office Buildings</h3>
+            <p>Lobby machines serve thousands of daily commuters &mdash; anniversaries and birthdays sorted.</p>
           </div>
         </div>
       </div>
@@ -372,56 +288,56 @@
 
   <!-- FAQ -->
   <section class="section faq" id="faq">
-    <div class="container faq-container">
-      <span class="section-label">Questions?</span>
-      <h2>Frequently Asked Questions</h2>
+    <div class="container faq-wrap">
+      <span class="section-label">Common Questions</span>
+      <h2>FAQ</h2>
       <div class="faq-list">
         <div class="faq-item">
           <button class="faq-q" onclick="toggleFaq(this)">
-            How are the bouquets kept fresh inside the compartments? <span class="faq-arrow">&#8250;</span>
+            How fresh are the flowers? <span class="faq-arrow">+</span>
           </button>
           <div class="faq-a">
-            Each compartment is independently refrigerated and held at 4&deg;C. Large and medium compartments include a built-in water tray so stems can drink. Small compartments use sealed water-tube inserts. Combined with our 48-hour restock cycle, every bouquet is in peak condition.
+            Machines are restocked every 48 hours and kept at 4&deg;C. Flowers are cut-to-order from local farms and loaded within 24 hours of cutting. Once purchased, they typically stay fresh for another 5&ndash;7 days with proper care.
           </div>
         </div>
         <div class="faq-item">
           <button class="faq-q" onclick="toggleFaq(this)">
-            How does the locker door open? <span class="faq-arrow">&#8250;</span>
+            How does the door actually open? <span class="faq-arrow">+</span>
           </button>
           <div class="faq-a">
-            The customer taps the compartment number on the central touchscreen, reviews the bouquet details and price, and pays by contactless card or phone. The moment payment confirms, an electronic latch releases just that one door &mdash; it clicks open a few centimetres. The customer opens it fully, lifts out the flowers, and closes it again.
+            You select a compartment on the central touchscreen, confirm the price, and pay by contactless card or phone. An electronic latch releases just that one door &mdash; it clicks open slightly. You open it fully, take your flowers, and close it again. The other compartments stay locked throughout.
           </div>
         </div>
         <div class="faq-item">
           <button class="faq-q" onclick="toggleFaq(this)">
-            Who restocks and maintains the machine? <span class="faq-arrow">&#8250;</span>
+            What payment methods are accepted? <span class="faq-arrow">+</span>
           </button>
           <div class="faq-a">
-            BloomBox handles everything. Our local floral partners visit every 48 hours to replace sold or ageing stock. Remote diagnostics alert our team to any technical issues before they affect customers. Your venue staff never need to touch the machine.
+            All modern flower vending machines accept contactless debit and credit cards, Apple Pay, and Google Pay via NFC tap. Most do not accept cash. Some also support app-based payments and pre-ordering.
           </div>
         </div>
         <div class="faq-item">
           <button class="faq-q" onclick="toggleFaq(this)">
-            What happens to unsold flowers? <span class="faq-arrow">&#8250;</span>
+            What happens if a flower is damaged? <span class="faq-arrow">+</span>
           </button>
           <div class="faq-a">
-            Any unsold bouquets approaching the 48-hour mark are removed at restock and donated to local care homes, hospitals, and charities. We have a zero-waste policy &mdash; flowers always go to someone who can enjoy them.
+            Most operators offer a simple refund process via the machine&apos;s app or a QR code on the receipt. Take a photo and submit within 24 hours for a full refund. The machines also flag damaged stock to operators remotely.
           </div>
         </div>
         <div class="faq-item">
           <button class="faq-q" onclick="toggleFaq(this)">
-            How much space does the machine need? <span class="faq-arrow">&#8250;</span>
+            How big is the machine? <span class="faq-arrow">+</span>
           </button>
           <div class="faq-a">
-            The cabinet is 180&times;130&times;55cm (H&times;W&times;D) and runs from a standard 240V/13A plug socket. It requires roughly 1.5m of clear frontage so customers can comfortably browse the glass doors. The wheeled base makes repositioning straightforward.
+            A typical glass-locker flower machine is around 180cm tall, 130cm wide, and 55cm deep. It runs from a standard plug socket and has lockable castors for easy repositioning indoors.
           </div>
         </div>
         <div class="faq-item">
           <button class="faq-q" onclick="toggleFaq(this)">
-            What do I earn as a venue partner? <span class="faq-arrow">&#8250;</span>
+            Who restocks and maintains the machine? <span class="faq-arrow">+</span>
           </button>
           <div class="faq-a">
-            Venue partners receive 15&ndash;20% of gross sales, paid monthly. There are no upfront costs, installation fees, or maintenance charges. BloomBox covers all hardware, stocking, and servicing. Locations with 300+ daily foot traffic typically see strong returns from the first month.
+            The machine operator (not the venue) handles all restocking and maintenance. Venues simply provide the floor space and a plug socket. Remote monitoring alerts the operator to any technical issues automatically.
           </div>
         </div>
       </div>
@@ -430,117 +346,68 @@
 
   <!-- CONTACT -->
   <section class="section contact" id="contact">
-    <div class="container contact-grid">
-      <div class="contact-text">
-        <span class="section-label">Partner With Us</span>
-        <h2>Get a BloomBox Machine for Your Venue</h2>
-        <p>
-          Zero upfront cost. We install the machine, stock it, and maintain it.
-          You earn a revenue share from every sale &mdash; with zero extra work
-          for your team.
-        </p>
-        <ul class="check-list">
-          <li>&#10003; Free installation &amp; hardware</li>
-          <li>&#10003; Full stocking &amp; restocking by us</li>
-          <li>&#10003; Remote monitoring &amp; maintenance</li>
-          <li>&#10003; 15&ndash;20% revenue share, paid monthly</li>
-          <li>&#10003; No long-term lock-in contracts</li>
-        </ul>
+    <div class="container">
+      <span class="section-label">Get In Touch</span>
+      <h2>Curious? We&apos;d love to hear from you.</h2>
+      <p class="contact-intro">Whether you want to know more about flower vending machines, find one near you, or discuss placing one in your venue &mdash; just reach out.</p>
+      <div class="contact-grid">
+        <div class="contact-phone-card">
+          <div class="phone-icon">&#128222;</div>
+          <div class="phone-label">Call Us Anytime</div>
+          <!-- Replace with your actual phone number -->
+          <a href="tel:+18005566566" class="phone-number">+1 (800) 556-6566</a>
+          <p class="phone-note">Mon &ndash; Fri, 9am &ndash; 6pm &bull; We usually respond same day</p>
+        </div>
+        <form class="contact-form" onsubmit="handleSubmit(event)">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" placeholder="Jane Smith" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="jane@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="interest">I&apos;m interested in&hellip;</label>
+            <select id="interest">
+              <option value="">Select&hellip;</option>
+              <option>Learning more about how they work</option>
+              <option>Finding a machine near me</option>
+              <option>Placing a machine in my venue</option>
+              <option>Press / media enquiry</option>
+              <option>Something else</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" rows="4" placeholder="Tell us what you&apos;re wondering about&hellip;"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%">Send Message</button>
+          <div class="form-success" id="formSuccess">&#10003; Message sent! We&apos;ll be in touch soon.</div>
+        </form>
       </div>
-      <form class="contact-form" onsubmit="handleSubmit(event)">
-        <h3>Request a Machine</h3>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="fname">First Name</label>
-            <input type="text" id="fname" placeholder="Jane" required />
-          </div>
-          <div class="form-group">
-            <label for="lname">Last Name</label>
-            <input type="text" id="lname" placeholder="Smith" required />
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" placeholder="jane@venue.com" required />
-        </div>
-        <div class="form-group">
-          <label for="venue">Venue Type</label>
-          <select id="venue" required>
-            <option value="">Select venue type&hellip;</option>
-            <option>Supermarket / Grocery</option>
-            <option>Hospital / Medical Centre</option>
-            <option>Hotel / Resort</option>
-            <option>Airport / Transit Hub</option>
-            <option>Shopping Centre / Retail</option>
-            <option>Office / Corporate Building</option>
-            <option>Petrol Station / Forecourt</option>
-            <option>Other</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="traffic">Estimated Daily Foot Traffic</label>
-          <select id="traffic">
-            <option value="">Select range&hellip;</option>
-            <option>Under 300</option>
-            <option>300 &ndash; 1,000</option>
-            <option>1,000 &ndash; 5,000</option>
-            <option>5,000+</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="message">Anything else?</label>
-          <textarea id="message" rows="3" placeholder="Tell us about your location&hellip;"></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary" style="width:100%">Send Request</button>
-        <div class="form-success" id="formSuccess">&#10003; Thanks! We&apos;ll be in touch within 24 hours.</div>
-      </form>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer class="footer">
-    <div class="container footer-grid">
+    <div class="container footer-inner">
       <div class="footer-brand">
         <div class="logo">&#127800; BloomBox</div>
-        <p>Premium flower locker machines. Making beautiful bouquets available wherever people are, around the clock.</p>
-        <div class="social-links">
-          <a href="#" aria-label="Instagram">&#128247;</a>
-          <a href="#" aria-label="Facebook">&#128172;</a>
-          <a href="#" aria-label="LinkedIn">&#128188;</a>
-        </div>
+        <p>Your guide to flower vending machines &mdash; fresh flowers, anytime, anywhere.</p>
       </div>
-      <div class="footer-col">
-        <h4>Company</h4>
-        <ul>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#faq">FAQ</a></li>
-          <li><a href="#">Sustainability</a></li>
-          <li><a href="#">Press</a></li>
-          <li><a href="#">Careers</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Partner</h4>
-        <ul>
-          <li><a href="#contact">Get a Machine</a></li>
-          <li><a href="#">Farm Partners</a></li>
-          <li><a href="#">Wholesale</a></li>
-          <li><a href="#">B2B Gifting</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>The Machine</h4>
-        <ul>
-          <li><a href="#machines">Specs</a></li>
-          <li><a href="#how">How It Works</a></li>
-          <li><a href="#flowers">Bouquets</a></li>
-          <li><a href="#locations">Locations</a></li>
-        </ul>
+      <div class="footer-links">
+        <a href="#about">What Is It?</a>
+        <a href="#how">How It Works</a>
+        <a href="#facts">Facts</a>
+        <a href="#locations">Locations</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
       </div>
     </div>
     <div class="footer-bottom">
       <div class="container">
-        &copy; 2026 BloomBox Inc. &bull; <a href="#">Privacy Policy</a> &bull; <a href="#">Terms of Service</a>
+        &copy; 2026 BloomBox &bull; <a href="#">Privacy Policy</a>
       </div>
     </div>
   </footer>
@@ -553,7 +420,6 @@
     document.getElementById('hamburger').addEventListener('click', () => {
       document.getElementById('mobileMenu').classList.toggle('open');
     });
-
     document.querySelectorAll('#mobileMenu a').forEach(a => {
       a.addEventListener('click', () => document.getElementById('mobileMenu').classList.remove('open'));
     });
@@ -561,8 +427,14 @@
     function toggleFaq(btn) {
       const item = btn.parentElement;
       const isOpen = item.classList.contains('open');
-      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
-      if (!isOpen) item.classList.add('open');
+      document.querySelectorAll('.faq-item').forEach(i => {
+        i.classList.remove('open');
+        i.querySelector('.faq-arrow').textContent = '+';
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        btn.querySelector('.faq-arrow').textContent = '×';
+      }
     }
 
     function handleSubmit(e) {
@@ -573,8 +445,8 @@
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-    }, { threshold: 0.12 });
-    document.querySelectorAll('.step, .flower-card, .location-item, .testi-card, .stat, .spec-card').forEach(el => observer.observe(el));
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.step, .fact-card, .loc-item, .stat').forEach(el => observer.observe(el));
   </script>
 </body>
 </html>
