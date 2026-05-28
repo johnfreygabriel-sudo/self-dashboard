@@ -3,35 +3,96 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dashboard</title>
+  <title>Shiftwell — Online Fitness Coaching</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="app">
     <aside class="sidebar">
       <div class="sidebar-top">
-        <div class="brand">&#9632; Dashboard</div>
+        <div class="brand">
+          <img
+            src="./logo.png"
+            alt="Shiftwell – Online Fitness Coaching"
+            class="brand-logo"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
+          />
+          <div class="brand-fallback" style="display:none">
+            <span class="brand-monogram">SW</span>
+            <span class="brand-name-text">Shiftwell</span>
+            <span class="brand-tagline">— Online Fitness Coaching —</span>
+          </div>
+        </div>
       </div>
+
       <nav class="nav">
         <button class="nav-item active" data-section="tasks">
-          <span class="nav-icon">&#10003;</span> Tasks
+          <span class="nav-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <polyline points="9 11 12 14 22 4"/>
+              <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+            </svg>
+          </span>
+          <span class="nav-label">Tasks</span>
         </button>
+
         <button class="nav-item" data-section="goals">
-          <span class="nav-icon">&#9651;</span> Goals
+          <span class="nav-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/>
+              <circle cx="12" cy="12" r="6"/>
+              <circle cx="12" cy="12" r="2"/>
+            </svg>
+          </span>
+          <span class="nav-label">Goals</span>
         </button>
+
         <button class="nav-item" data-section="journal">
-          <span class="nav-icon">&#9645;</span> Journal
+          <span class="nav-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+              <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+            </svg>
+          </span>
+          <span class="nav-label">Journal</span>
         </button>
+
         <button class="nav-item" data-section="notes">
-          <span class="nav-icon">&#9633;</span> Notes
+          <span class="nav-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+              <line x1="16" y1="13" x2="8" y2="13"/>
+              <line x1="16" y1="17" x2="8" y2="17"/>
+            </svg>
+          </span>
+          <span class="nav-label">Notes</span>
         </button>
+
         <button class="nav-item" data-section="ideas">
-          <span class="nav-icon">&#9675;</span> Ideas
+          <span class="nav-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M9 18h6"/>
+              <path d="M10 22h4"/>
+              <path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7z"/>
+            </svg>
+          </span>
+          <span class="nav-label">Ideas</span>
         </button>
+
         <button class="nav-item" data-section="calendar">
-          <span class="nav-icon">&#9632;</span> Calendar
+          <span class="nav-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+              <line x1="16" y1="2" x2="16" y2="6"/>
+              <line x1="8" y1="2" x2="8" y2="6"/>
+              <line x1="3" y1="10" x2="21" y2="10"/>
+            </svg>
+          </span>
+          <span class="nav-label">Calendar</span>
         </button>
       </nav>
+
       <div class="sidebar-bottom">
         <div class="date-display" id="sidebarDate"></div>
         <div class="db-status" id="dbStatus"></div>
@@ -89,10 +150,10 @@
         <div class="mood-row">
           <span class="mood-label">Mood</span>
           <div class="mood-options" id="moodOptions">
-            <button class="mood-btn" data-mood="great" onclick="setMood('great')">&#128513; Great</button>
-            <button class="mood-btn" data-mood="good" onclick="setMood('good')">&#128512; Good</button>
-            <button class="mood-btn" data-mood="okay" onclick="setMood('okay')">&#128528; Okay</button>
-            <button class="mood-btn" data-mood="bad" onclick="setMood('bad')">&#128542; Bad</button>
+            <button class="mood-btn" data-mood="great" onclick="setMood('great')">Great</button>
+            <button class="mood-btn" data-mood="good" onclick="setMood('good')">Good</button>
+            <button class="mood-btn" data-mood="okay" onclick="setMood('okay')">Okay</button>
+            <button class="mood-btn" data-mood="bad" onclick="setMood('bad')">Bad</button>
           </div>
         </div>
         <textarea id="journalEntry" placeholder="Write about your day..."></textarea>
