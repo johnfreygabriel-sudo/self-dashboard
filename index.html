@@ -4,220 +4,338 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shiftwell — Online Fitness Coaching</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,500;0,600;0,700;0,800;1,700;1,800&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="app">
-    <aside class="sidebar">
-      <div class="sidebar-top">
-        <div class="brand">
-          <img
-            src="./logo.png"
-            alt="Shiftwell – Online Fitness Coaching"
-            class="brand-logo"
-            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
-          />
-          <div class="brand-fallback" style="display:none">
-            <span class="brand-monogram">SW</span>
-            <span class="brand-name-text">Shiftwell</span>
-            <span class="brand-tagline">— Online Fitness Coaching —</span>
-          </div>
-        </div>
-      </div>
 
-      <nav class="nav">
-        <button class="nav-item active" data-section="tasks">
-          <span class="nav-icon">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <polyline points="9 11 12 14 22 4"/>
-              <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
-            </svg>
-          </span>
-          <span class="nav-label">Tasks</span>
-        </button>
-
-        <button class="nav-item" data-section="goals">
-          <span class="nav-icon">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <circle cx="12" cy="12" r="10"/>
-              <circle cx="12" cy="12" r="6"/>
-              <circle cx="12" cy="12" r="2"/>
-            </svg>
-          </span>
-          <span class="nav-label">Goals</span>
-        </button>
-
-        <button class="nav-item" data-section="journal">
-          <span class="nav-icon">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
-              <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
-            </svg>
-          </span>
-          <span class="nav-label">Journal</span>
-        </button>
-
-        <button class="nav-item" data-section="notes">
-          <span class="nav-icon">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-              <polyline points="14 2 14 8 20 8"/>
-              <line x1="16" y1="13" x2="8" y2="13"/>
-              <line x1="16" y1="17" x2="8" y2="17"/>
-            </svg>
-          </span>
-          <span class="nav-label">Notes</span>
-        </button>
-
-        <button class="nav-item" data-section="ideas">
-          <span class="nav-icon">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M9 18h6"/>
-              <path d="M10 22h4"/>
-              <path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7z"/>
-            </svg>
-          </span>
-          <span class="nav-label">Ideas</span>
-        </button>
-
-        <button class="nav-item" data-section="calendar">
-          <span class="nav-icon">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
-              <line x1="16" y1="2" x2="16" y2="6"/>
-              <line x1="8" y1="2" x2="8" y2="6"/>
-              <line x1="3" y1="10" x2="21" y2="10"/>
-            </svg>
-          </span>
-          <span class="nav-label">Calendar</span>
-        </button>
+  <!-- NAV -->
+  <header class="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo" aria-label="Shiftwell home">
+        <img src="./logo.png" alt="Shiftwell" class="logo-img"
+          onerror="this.style.display='none';document.querySelector('.logo-text').style.display='block'" />
+        <span class="logo-text" style="display:none">SHIFTWELL</span>
+      </a>
+      <nav class="nav-links" aria-label="Site navigation">
+        <a href="#about">About</a>
+        <a href="#process">Process</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#apply" class="btn btn-sm">Apply Now</a>
       </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+    </div>
+    <div class="nav-mobile" id="navMobile">
+      <a href="#about" onclick="closeMobileNav()">About</a>
+      <a href="#process" onclick="closeMobileNav()">Process</a>
+      <a href="#pricing" onclick="closeMobileNav()">Pricing</a>
+      <a href="#apply" class="btn btn-sm" onclick="closeMobileNav()">Apply Now</a>
+    </div>
+  </header>
 
-      <div class="sidebar-bottom">
-        <div class="date-display" id="sidebarDate"></div>
-        <div class="db-status" id="dbStatus"></div>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-eyebrow">— Online Fitness Coaching —</div>
+      <h1 class="hero-headline">
+        SHIFT YOUR BODY.<br>SHIFT YOUR <span class="accent">LIFE.</span>
+      </h1>
+      <p class="hero-sub">
+        Personalised coaching built around your goals, your schedule, and your lifestyle — so you finally get the results you've been working toward.
+      </p>
+      <div class="hero-cta">
+        <a href="#apply" class="btn btn-primary btn-lg">Start Your Journey</a>
+        <a href="#process" class="btn btn-ghost btn-lg">See How It Works</a>
       </div>
-    </aside>
+    </div>
+  </section>
 
-    <main class="main">
-
-      <!-- TASKS -->
-      <section class="section active" id="tasks">
-        <div class="section-header">
-          <h1>Tasks</h1>
-          <span class="subtitle" id="taskCount"></span>
+  <!-- STATS BAR -->
+  <div class="stats-bar">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat">
+          <span class="stat-num">200+</span>
+          <span class="stat-label">Clients Coached</span>
         </div>
-        <div class="input-row">
-          <input type="text" id="taskInput" placeholder="Add a task..." />
-          <select id="taskPriority">
-            <option value="normal">Normal</option>
-            <option value="high">High</option>
-            <option value="low">Low</option>
-          </select>
-          <button onclick="addTask()">Add</button>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">5+</span>
+          <span class="stat-label">Years Experience</span>
         </div>
-        <div class="filter-row">
-          <button class="filter-btn active" onclick="filterTasks('all', this)">All</button>
-          <button class="filter-btn" onclick="filterTasks('active', this)">Active</button>
-          <button class="filter-btn" onclick="filterTasks('done', this)">Done</button>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">98%</span>
+          <span class="stat-label">Client Retention</span>
         </div>
-        <ul class="task-list" id="taskList"></ul>
-      </section>
-
-      <!-- GOALS -->
-      <section class="section" id="goals">
-        <div class="section-header">
-          <h1>Goals</h1>
-          <span class="subtitle">What are you working towards?</span>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">100%</span>
+          <span class="stat-label">Online &amp; Flexible</span>
         </div>
-        <div class="input-row">
-          <input type="text" id="goalInput" placeholder="Add a goal..." />
-          <button onclick="addGoal()">Add</button>
-        </div>
-        <div class="goals-list" id="goalsList"></div>
-      </section>
-
-      <!-- JOURNAL -->
-      <section class="section" id="journal">
-        <div class="section-header">
-          <h1>Journal</h1>
-        </div>
-        <div class="journal-nav">
-          <button onclick="journalPrev()">&#8592;</button>
-          <span id="journalLabel"></span>
-          <button onclick="journalNext()">&#8594;</button>
-        </div>
-        <div class="mood-row">
-          <span class="mood-label">Mood</span>
-          <div class="mood-options" id="moodOptions">
-            <button class="mood-btn" data-mood="great" onclick="setMood('great')">Great</button>
-            <button class="mood-btn" data-mood="good" onclick="setMood('good')">Good</button>
-            <button class="mood-btn" data-mood="okay" onclick="setMood('okay')">Okay</button>
-            <button class="mood-btn" data-mood="bad" onclick="setMood('bad')">Bad</button>
-          </div>
-        </div>
-        <textarea id="journalEntry" placeholder="Write about your day..."></textarea>
-        <button class="save-btn" onclick="saveJournal()">Save Entry</button>
-        <div class="saved-msg" id="journalSaved"></div>
-      </section>
-
-      <!-- NOTES -->
-      <section class="section" id="notes">
-        <div class="section-header">
-          <h1>Notes</h1>
-        </div>
-        <div class="notes-layout">
-          <div class="notes-sidebar">
-            <div class="input-row" style="flex-direction:column;gap:0.5rem;">
-              <input type="text" id="noteTitleInput" placeholder="Note title..." />
-              <button onclick="newNote()" style="width:100%">New Note</button>
-            </div>
-            <ul class="notes-list" id="notesList"></ul>
-          </div>
-          <div class="notes-editor">
-            <div class="note-title-display" id="noteTitleDisplay">Select a note</div>
-            <textarea id="noteContent" placeholder="Start writing..." oninput="autoSaveNote()"></textarea>
-          </div>
-        </div>
-      </section>
-
-      <!-- IDEAS -->
-      <section class="section" id="ideas">
-        <div class="section-header">
-          <h1>Ideas</h1>
-          <span class="subtitle">Capture everything</span>
-        </div>
-        <div class="input-row">
-          <input type="text" id="ideaInput" placeholder="What's the idea?" />
-          <button onclick="addIdea()">Capture</button>
-        </div>
-        <div class="ideas-grid" id="ideasGrid"></div>
-      </section>
-
-      <!-- CALENDAR -->
-      <section class="section" id="calendar">
-        <div class="section-header">
-          <h1>Calendar</h1>
-        </div>
-        <div class="cal-nav">
-          <button onclick="calPrev()">&#8592;</button>
-          <span id="calLabel"></span>
-          <button onclick="calNext()">&#8594;</button>
-        </div>
-        <div class="cal-grid" id="calGrid"></div>
-        <div class="cal-event-panel" id="calEventPanel" style="display:none">
-          <div class="cal-event-date" id="calEventDate"></div>
-          <div class="input-row">
-            <input type="text" id="calEventInput" placeholder="Add event..." />
-            <button onclick="addCalEvent()">Add</button>
-          </div>
-          <ul class="cal-events-list" id="calEventsList"></ul>
-        </div>
-      </section>
-
-    </main>
+      </div>
+    </div>
   </div>
 
-  <script type="module" src="app.js"></script>
+  <!-- ABOUT / FEATURES -->
+  <section class="features" id="about">
+    <div class="container">
+      <div class="section-eyebrow">Why Shiftwell</div>
+      <h2 class="section-title">COACHING THAT<br>ACTUALLY WORKS</h2>
+      <div class="features-grid">
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+              <path d="M2 17l10 5 10-5"/>
+              <path d="M2 12l10 5 10-5"/>
+            </svg>
+          </div>
+          <h3>Fully Personalised</h3>
+          <p>No cookie-cutter plans. Every program is built from scratch around your goals, schedule, and training history.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 16 14"/>
+            </svg>
+          </div>
+          <h3>Flexible Scheduling</h3>
+          <p>Train on your time. Your plan adapts whether you have 3 days or 6 — it fits your life, not the other way around.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <h3>Direct Coach Access</h3>
+          <p>You work directly with your coach — not a bot, not a template. Real feedback and real accountability.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+            </svg>
+          </div>
+          <h3>Science-Backed Programming</h3>
+          <p>Progressive overload principles that systematically push your limits and ensure you're always moving forward.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M18 8h1a4 4 0 0 1 0 8h-1"/>
+              <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/>
+              <line x1="6" y1="1" x2="6" y2="4"/>
+              <line x1="10" y1="1" x2="10" y2="4"/>
+              <line x1="14" y1="1" x2="14" y2="4"/>
+            </svg>
+          </div>
+          <h3>Nutrition Coaching</h3>
+          <p>Sustainable nutrition strategies — not crash diets. Learn to fuel your performance and feel your best every day.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="18" y1="20" x2="18" y2="10"/>
+              <line x1="12" y1="20" x2="12" y2="4"/>
+              <line x1="6" y1="20" x2="6" y2="14"/>
+            </svg>
+          </div>
+          <h3>Measurable Progress</h3>
+          <p>Weekly check-ins, progress tracking, and data-driven adjustments keep you on track toward your goal.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="process" id="process">
+    <div class="container">
+      <div class="section-eyebrow">The Process</div>
+      <h2 class="section-title">HOW IT WORKS</h2>
+      <div class="steps">
+
+        <div class="step">
+          <div class="step-num">01</div>
+          <div class="step-content">
+            <h3>Apply Online</h3>
+            <p>Fill out a short application so I can understand your goals, training history, and what's held you back in the past.</p>
+          </div>
+        </div>
+
+        <div class="step-arrow" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"/>
+            <polyline points="12 5 19 12 12 19"/>
+          </svg>
+        </div>
+
+        <div class="step">
+          <div class="step-num">02</div>
+          <div class="step-content">
+            <h3>Strategy Call</h3>
+            <p>We jump on a free call to map out your goals, confirm we're a great fit, and build a plan of attack together.</p>
+          </div>
+        </div>
+
+        <div class="step-arrow" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"/>
+            <polyline points="12 5 19 12 12 19"/>
+          </svg>
+        </div>
+
+        <div class="step">
+          <div class="step-num">03</div>
+          <div class="step-content">
+            <h3>Start Training</h3>
+            <p>Your fully custom program goes live. Train, check in weekly, and watch your body transform with expert guidance every step of the way.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="pricing" id="pricing">
+    <div class="container">
+      <div class="section-eyebrow">Investment</div>
+      <h2 class="section-title">COACHING PACKAGES</h2>
+      <div class="pricing-grid">
+
+        <div class="pricing-card">
+          <div class="pricing-tier">Starter</div>
+          <div class="pricing-price">$<span class="price-amount">X</span><span class="price-period">/mo</span></div>
+          <ul class="pricing-list">
+            <li>Custom Training Program</li>
+            <li>Weekly Check-ins</li>
+            <li>Nutrition Guidelines</li>
+            <li>App Access</li>
+            <li>Email Support</li>
+          </ul>
+          <a href="#apply" class="btn btn-outline">Apply Now</a>
+        </div>
+
+        <div class="pricing-card pricing-featured">
+          <div class="pricing-badge">Most Popular</div>
+          <div class="pricing-tier">Premium</div>
+          <div class="pricing-price">$<span class="price-amount">X</span><span class="price-period">/mo</span></div>
+          <ul class="pricing-list">
+            <li>Custom Training Program</li>
+            <li>Weekly Check-ins</li>
+            <li>Full Nutrition Coaching</li>
+            <li>App Access</li>
+            <li>Direct Coach Messaging</li>
+            <li>Bi-weekly Video Calls</li>
+          </ul>
+          <a href="#apply" class="btn btn-primary">Apply Now</a>
+        </div>
+
+        <div class="pricing-card">
+          <div class="pricing-tier">Elite</div>
+          <div class="pricing-price">$<span class="price-amount">X</span><span class="price-period">/mo</span></div>
+          <ul class="pricing-list">
+            <li>Everything in Premium</li>
+            <li>Daily Check-ins</li>
+            <li>Priority Response</li>
+            <li>Weekly Video Calls</li>
+            <li>Supplement Guidance</li>
+            <li>Lifestyle Coaching</li>
+          </ul>
+          <a href="#apply" class="btn btn-outline">Apply Now</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials">
+    <div class="container">
+      <div class="section-eyebrow">Results</div>
+      <h2 class="section-title">CLIENT STORIES</h2>
+      <div class="testimonials-grid">
+
+        <div class="testimonial">
+          <div class="testimonial-stars" aria-label="5 stars">★★★★★</div>
+          <p>"I've tried countless programs before Shiftwell. Within 3 months I dropped 12kg and finally feel confident in my own skin. The accountability is next level."</p>
+          <div class="testimonial-author">Alex M.</div>
+        </div>
+
+        <div class="testimonial">
+          <div class="testimonial-stars" aria-label="5 stars">★★★★★</div>
+          <p>"The personalised approach made all the difference. My coach understood my busy schedule and built a plan that actually fit my life. Best investment I've made."</p>
+          <div class="testimonial-author">Sarah K.</div>
+        </div>
+
+        <div class="testimonial">
+          <div class="testimonial-stars" aria-label="5 stars">★★★★★</div>
+          <p>"Gained 8kg of lean muscle in 6 months with zero fluff — just consistent, structured training and smart nutrition. Couldn't have done it without this program."</p>
+          <div class="testimonial-author">James T.</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="cta-section" id="apply">
+    <div class="container">
+      <div class="cta-inner">
+        <img src="./logo.png" alt="Shiftwell" class="cta-logo"
+          onerror="this.style.display='none'" />
+        <h2 class="cta-title">READY TO SHIFT?</h2>
+        <p class="cta-sub">Limited coaching spots available each month. Apply now and take the first step toward the body and life you want.</p>
+        <a href="mailto:johnfrey.gabriel@gmail.com?subject=Shiftwell%20Coaching%20Application" class="btn btn-primary btn-lg">Apply for Coaching</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <img src="./logo.png" alt="Shiftwell" class="footer-logo"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
+        <span class="footer-logo-text" style="display:none">SHIFTWELL</span>
+        <p class="footer-copy">&copy; 2026 Shiftwell. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('navToggle')
+    const mobile = document.getElementById('navMobile')
+    toggle.addEventListener('click', () => {
+      const open = mobile.classList.toggle('open')
+      toggle.setAttribute('aria-expanded', open)
+    })
+    function closeMobileNav() { mobile.classList.remove('open'); toggle.setAttribute('aria-expanded', false) }
+
+    // Sticky nav shadow on scroll
+    const nav = document.querySelector('.nav')
+    window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 20))
+  </script>
 </body>
 </html>
