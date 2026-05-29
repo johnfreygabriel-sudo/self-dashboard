@@ -126,7 +126,7 @@ body {
 }
 
 .nav-logo { display: flex; align-items: center; cursor: pointer; text-decoration: none; }
-.logo-img { height: 52px; width: auto; display: block; }
+.logo-img { height: 64px; width: auto; display: block; }
 .logo-text {
   font-family: var(--font-h); font-weight: 800; font-size: 1.4rem;
   letter-spacing: 0.2em; color: var(--text); text-transform: uppercase; text-decoration: none;
@@ -209,6 +209,13 @@ body {
 }
 
 .hero-text {}
+
+.hero-logo {
+  width: 180px;
+  height: auto;
+  display: block;
+  margin-bottom: 2rem;
+}
 
 .hero-eyebrow {
   font-size: 0.7rem; font-weight: 600;
@@ -416,17 +423,12 @@ body {
 .about-visual { display: flex; flex-direction: column; align-items: center; gap: 1.25rem; }
 
 .about-logo-img {
-  width: 220px; height: auto; display: block;
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--border);
-}
-
-.about-logo-img {
   width: 220px;
   height: auto;
   display: block;
   border-radius: var(--radius-lg);
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-hover);
+  box-shadow: 0 0 40px rgba(201,160,64,0.06);
 }
 
 .about-badge-stack { display: flex; flex-direction: column; gap: 0.45rem; align-items: center; }
