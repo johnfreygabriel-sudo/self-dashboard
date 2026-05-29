@@ -421,6 +421,14 @@ body {
   border: 1px solid var(--border);
 }
 
+.about-logo-img {
+  width: 220px;
+  height: auto;
+  display: block;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+}
+
 .about-badge-stack { display: flex; flex-direction: column; gap: 0.45rem; align-items: center; }
 
 .about-badge {
