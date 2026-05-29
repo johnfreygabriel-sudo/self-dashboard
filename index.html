@@ -20,13 +20,14 @@
         <span class="logo-text" style="display:none">SHIFTWELL</span>
       </a>
       <nav class="nav-links" aria-label="Site navigation">
-        <a href="#about">About</a>
+        <a href="#about-coach">About</a>
         <a href="#process">Process</a>
         <a href="#pricing">Pricing</a>
-        <a href="#apply" class="btn btn-sm">Apply Now</a>
+        <a href="#faq">FAQ</a>
+        <a href="#apply" class="btn btn-sm" id="navApplyBtn">Apply Now</a>
       </nav>
       <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <svg id="menuIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
           <line x1="3" y1="6" x2="21" y2="6"/>
           <line x1="3" y1="12" x2="21" y2="12"/>
           <line x1="3" y1="18" x2="21" y2="18"/>
@@ -34,26 +35,51 @@
       </button>
     </div>
     <div class="nav-mobile" id="navMobile">
-      <a href="#about" onclick="closeMobileNav()">About</a>
+      <a href="#about-coach" onclick="closeMobileNav()">About</a>
       <a href="#process" onclick="closeMobileNav()">Process</a>
       <a href="#pricing" onclick="closeMobileNav()">Pricing</a>
-      <a href="#apply" class="btn btn-sm" onclick="closeMobileNav()">Apply Now</a>
+      <a href="#faq" onclick="closeMobileNav()">FAQ</a>
+      <a href="#apply" class="btn btn-sm" id="mobileApplyBtn" onclick="closeMobileNav()">Apply Now</a>
     </div>
   </header>
 
   <!-- HERO -->
   <section class="hero">
     <div class="hero-inner">
-      <div class="hero-eyebrow">— Online Fitness Coaching —</div>
-      <h1 class="hero-headline">
-        SHIFT YOUR BODY.<br>SHIFT YOUR <span class="accent">LIFE.</span>
-      </h1>
-      <p class="hero-sub">
-        Personalised coaching built around your goals, your schedule, and your lifestyle — so you finally get the results you've been working toward.
-      </p>
-      <div class="hero-cta">
-        <a href="#apply" class="btn btn-primary btn-lg">Start Your Journey</a>
-        <a href="#process" class="btn btn-ghost btn-lg">See How It Works</a>
+      <div class="hero-text">
+        <div class="hero-eyebrow">— Online Fitness Coaching —</div>
+        <h1 class="hero-headline">
+          SHIFT YOUR BODY.<br>SHIFT YOUR <span class="accent">LIFE.</span>
+        </h1>
+        <p class="hero-sub">
+          Personalised coaching built around your goals, your schedule, and your lifestyle — so you finally get the results you've been working toward.
+        </p>
+        <div class="hero-cta">
+          <button class="btn btn-primary btn-lg open-modal">Start Your Journey</button>
+          <a href="#process" class="btn btn-ghost btn-lg">See How It Works</a>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="coach-preview">
+          <div class="coach-avatar-lg">JG</div>
+          <div class="coach-preview-name">Coach John</div>
+          <div class="coach-preview-title">Online Fitness Coach</div>
+          <div class="coach-preview-stats">
+            <div class="cp-stat">
+              <span class="cp-num">200+</span>
+              <span class="cp-lbl">Clients</span>
+            </div>
+            <div class="cp-stat">
+              <span class="cp-num">5+</span>
+              <span class="cp-lbl">Years</span>
+            </div>
+            <div class="cp-stat">
+              <span class="cp-num">98%</span>
+              <span class="cp-lbl">Retention</span>
+            </div>
+          </div>
+          <div class="coach-taking-badge">Taking new clients</div>
+        </div>
       </div>
     </div>
   </section>
@@ -85,8 +111,48 @@
     </div>
   </div>
 
-  <!-- ABOUT / FEATURES -->
-  <section class="features" id="about">
+  <!-- ABOUT COACH -->
+  <section class="about-coach" id="about-coach">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-visual" data-reveal>
+          <div class="about-avatar">JG</div>
+          <div class="about-badge-stack">
+            <div class="about-badge">ACE Certified PT</div>
+            <div class="about-badge">Precision Nutrition Coach</div>
+            <div class="about-badge">5+ Years Online Coaching</div>
+          </div>
+        </div>
+        <div class="about-content">
+          <div class="section-eyebrow" data-reveal>Meet Your Coach</div>
+          <h2 class="section-title" data-reveal data-delay="100">JOHN GABRIEL</h2>
+          <p class="about-bio" data-reveal data-delay="200">
+            I've spent the last 5+ years helping over 200 people transform their bodies and build sustainable habits — without crash diets, unsustainable training hours, or one-size-fits-all programs.
+          </p>
+          <p class="about-bio" data-reveal data-delay="300">
+            My coaching philosophy is simple: understand your life first, then build a plan around it. Real accountability, real adjustments, and a direct line to me whenever you need it. No templates. No bots.
+          </p>
+          <div class="about-creds" data-reveal data-delay="400">
+            <div class="about-cred">
+              <span class="about-cred-num">200+</span>
+              <span class="about-cred-lbl">Clients Transformed</span>
+            </div>
+            <div class="about-cred">
+              <span class="about-cred-num">5+</span>
+              <span class="about-cred-lbl">Years Coaching</span>
+            </div>
+            <div class="about-cred">
+              <span class="about-cred-num">98%</span>
+              <span class="about-cred-lbl">Retention Rate</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features" id="features">
     <div class="container">
       <div class="section-eyebrow" data-reveal>Why Shiftwell</div>
       <h2 class="section-title" data-reveal data-delay="100">COACHING THAT<br>ACTUALLY WORKS</h2>
@@ -226,7 +292,7 @@
 
         <div class="pricing-card" data-reveal>
           <div class="pricing-tier">Starter</div>
-          <div class="pricing-price">$<span class="price-amount">X</span><span class="price-period">/mo</span></div>
+          <div class="pricing-price">$<span class="price-amount">149</span><span class="price-period">/mo</span></div>
           <ul class="pricing-list">
             <li>Custom Training Program</li>
             <li>Weekly Check-ins</li>
@@ -234,13 +300,13 @@
             <li>App Access</li>
             <li>Email Support</li>
           </ul>
-          <a href="#apply" class="btn btn-outline">Apply Now</a>
+          <button class="btn btn-outline open-modal">Apply Now</button>
         </div>
 
         <div class="pricing-card pricing-featured" data-reveal data-delay="100">
           <div class="pricing-badge">Most Popular</div>
           <div class="pricing-tier">Premium</div>
-          <div class="pricing-price">$<span class="price-amount">X</span><span class="price-period">/mo</span></div>
+          <div class="pricing-price">$<span class="price-amount">249</span><span class="price-period">/mo</span></div>
           <ul class="pricing-list">
             <li>Custom Training Program</li>
             <li>Weekly Check-ins</li>
@@ -249,12 +315,12 @@
             <li>Direct Coach Messaging</li>
             <li>Bi-weekly Video Calls</li>
           </ul>
-          <a href="#apply" class="btn btn-primary">Apply Now</a>
+          <button class="btn btn-primary open-modal">Apply Now</button>
         </div>
 
         <div class="pricing-card" data-reveal data-delay="200">
           <div class="pricing-tier">Elite</div>
-          <div class="pricing-price">$<span class="price-amount">X</span><span class="price-period">/mo</span></div>
+          <div class="pricing-price">$<span class="price-amount">349</span><span class="price-period">/mo</span></div>
           <ul class="pricing-list">
             <li>Everything in Premium</li>
             <li>Daily Check-ins</li>
@@ -263,7 +329,7 @@
             <li>Supplement Guidance</li>
             <li>Lifestyle Coaching</li>
           </ul>
-          <a href="#apply" class="btn btn-outline">Apply Now</a>
+          <button class="btn btn-outline open-modal">Apply Now</button>
         </div>
 
       </div>
@@ -280,19 +346,79 @@
         <div class="testimonial" data-reveal>
           <div class="testimonial-stars" aria-label="5 stars">★★★★★</div>
           <p>"I've tried countless programs before Shiftwell. Within 3 months I dropped 12kg and finally feel confident in my own skin. The accountability is next level."</p>
-          <div class="testimonial-author">Alex M.</div>
+          <div class="testimonial-header">
+            <div class="testimonial-avatar">AM</div>
+            <div class="testimonial-author">Alex M.</div>
+          </div>
         </div>
 
         <div class="testimonial" data-reveal data-delay="100">
           <div class="testimonial-stars" aria-label="5 stars">★★★★★</div>
           <p>"The personalised approach made all the difference. My coach understood my busy schedule and built a plan that actually fit my life. Best investment I've made."</p>
-          <div class="testimonial-author">Sarah K.</div>
+          <div class="testimonial-header">
+            <div class="testimonial-avatar">SK</div>
+            <div class="testimonial-author">Sarah K.</div>
+          </div>
         </div>
 
         <div class="testimonial" data-reveal data-delay="200">
           <div class="testimonial-stars" aria-label="5 stars">★★★★★</div>
           <p>"Gained 8kg of lean muscle in 6 months with zero fluff — just consistent, structured training and smart nutrition. Couldn't have done it without this program."</p>
-          <div class="testimonial-author">James T.</div>
+          <div class="testimonial-header">
+            <div class="testimonial-avatar">JT</div>
+            <div class="testimonial-author">James T.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <div class="section-eyebrow" data-reveal>FAQ</div>
+      <h2 class="section-title" data-reveal data-delay="100">COMMON QUESTIONS</h2>
+      <div class="faq-list" data-reveal data-delay="200">
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            How long is the minimum commitment?
+            <span class="faq-icon"><svg viewBox="0 0 12 12" aria-hidden="true"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg></span>
+          </button>
+          <div class="faq-a">There's no lock-in contract — coaching is month-to-month. That said, most clients see the best results after 3–6 months of consistent work, so I recommend committing to at least 3 months to give the program time to work.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Do I need a gym membership or specific equipment?
+            <span class="faq-icon"><svg viewBox="0 0 12 12" aria-hidden="true"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg></span>
+          </button>
+          <div class="faq-a">Not necessarily. Your program is built around whatever equipment you have access to — full gym, home gym, or just bodyweight. We'll make it work with what you've got.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            How do weekly check-ins work?
+            <span class="faq-icon"><svg viewBox="0 0 12 12" aria-hidden="true"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg></span>
+          </button>
+          <div class="faq-a">Each week you'll submit a short check-in covering your training, nutrition, sleep, and how you're feeling. I review every check-in personally and adjust your program if needed. You'll hear back from me within 24 hours.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            What's the difference between the packages?
+            <span class="faq-icon"><svg viewBox="0 0 12 12" aria-hidden="true"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg></span>
+          </button>
+          <div class="faq-a">The main difference is the level of contact and support. Starter gives you a great foundation with weekly check-ins and email support. Premium adds direct messaging and video calls. Elite is full-access with daily check-ins, priority response, and weekly calls — best for those who want maximum accountability.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Can I cancel at any time?
+            <span class="faq-icon"><svg viewBox="0 0 12 12" aria-hidden="true"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg></span>
+          </button>
+          <div class="faq-a">Yes. Cancel any time with 7 days' notice before your next billing date. No questions asked, no penalties. I want you here because the coaching is working for you, not because you're locked in.</div>
         </div>
 
       </div>
@@ -307,7 +433,7 @@
           onerror="this.style.display='none'" />
         <h2 class="cta-title">READY TO SHIFT?</h2>
         <p class="cta-sub">Limited coaching spots available each month. Apply now and take the first step toward the body and life you want.</p>
-        <a href="mailto:johnfrey.gabriel@gmail.com?subject=Shiftwell%20Coaching%20Application" class="btn btn-primary btn-lg">Apply for Coaching</a>
+        <button class="btn btn-primary btn-lg open-modal">Apply for Coaching</button>
       </div>
     </div>
   </section>
@@ -324,46 +450,156 @@
     </div>
   </footer>
 
+  <!-- APPLY MODAL -->
+  <div class="modal-overlay" id="applyModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-card">
+      <button class="modal-close" id="modalClose" aria-label="Close">&#x2715;</button>
+      <div id="applyForm">
+        <div class="modal-title" id="modalTitle">Apply for Coaching</div>
+        <p class="modal-sub">Fill in your details and I'll be in touch within 24 hours to set up your free strategy call.</p>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="applyName">Full Name</label>
+            <input id="applyName" type="text" placeholder="Your name" required />
+          </div>
+          <div class="form-group">
+            <label for="applyEmail">Email</label>
+            <input id="applyEmail" type="email" placeholder="your@email.com" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="applyGoal">Primary Goal</label>
+          <select id="applyGoal">
+            <option value="">Select your goal</option>
+            <option>Fat loss</option>
+            <option>Muscle gain</option>
+            <option>Body recomposition</option>
+            <option>Athletic performance</option>
+            <option>General health &amp; fitness</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="applyExp">Training Experience</label>
+          <select id="applyExp">
+            <option value="">Select experience level</option>
+            <option>Beginner (0–1 years)</option>
+            <option>Intermediate (1–3 years)</option>
+            <option>Advanced (3+ years)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="applyMsg">Tell me about your goals</label>
+          <textarea id="applyMsg" rows="3" placeholder="What are you trying to achieve? What's held you back?"></textarea>
+        </div>
+        <button type="button" class="btn btn-primary btn-lg" id="submitApply" style="width:100%">Send Application</button>
+      </div>
+      <div class="form-success" id="formSuccess">
+        <div class="success-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <h3>Application Sent!</h3>
+        <p>Thanks for reaching out. I'll review your application and get back to you within 24 hours to schedule your free strategy call.</p>
+      </div>
+    </div>
+  </div>
+
   <script>
-    // ── Mobile nav ────────────────────────────────────────────────────
-    const toggle = document.getElementById('navToggle')
-    const mobile = document.getElementById('navMobile')
+    // ── Mobile nav with ☰ / ✕ toggle ─────────────────────────────────
+    const toggle  = document.getElementById('navToggle')
+    const mobile  = document.getElementById('navMobile')
+    const menuIcon = document.getElementById('menuIcon')
+    const hamSVG  = `<svg id="menuIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>`
+    const closeSVG = `<svg id="menuIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>`
+
     toggle.addEventListener('click', () => {
       const open = mobile.classList.toggle('open')
       toggle.setAttribute('aria-expanded', open)
+      toggle.innerHTML = open ? closeSVG : hamSVG
     })
-    function closeMobileNav() { mobile.classList.remove('open'); toggle.setAttribute('aria-expanded', false) }
+
+    function closeMobileNav() {
+      mobile.classList.remove('open')
+      toggle.setAttribute('aria-expanded', false)
+      toggle.innerHTML = hamSVG
+    }
 
     // ── Sticky nav shadow ─────────────────────────────────────────────
     const nav = document.querySelector('.nav')
     window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 20), { passive: true })
 
-    // ── Interactive enhancements ──────────────────────────────────────
-    ;(function() {
-      const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-      const revealEls = document.querySelectorAll('[data-reveal]')
+    // ── Apply modal ───────────────────────────────────────────────────
+    const modal       = document.getElementById('applyModal')
+    const modalClose  = document.getElementById('modalClose')
+    const submitApply = document.getElementById('submitApply')
+    const formSuccess = document.getElementById('formSuccess')
+    const applyFormEl = document.getElementById('applyForm')
 
-      if (reduced) {
-        revealEls.forEach(el => el.classList.add('revealed'))
+    function openModal()  { modal.classList.add('open'); document.body.style.overflow = 'hidden' }
+    function closeModal() { modal.classList.remove('open'); document.body.style.overflow = '' }
+
+    document.querySelectorAll('.open-modal').forEach(btn => btn.addEventListener('click', openModal))
+    modalClose.addEventListener('click', closeModal)
+    modal.addEventListener('click', e => { if (e.target === modal) closeModal() })
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal() })
+
+    // Intercept "nav Apply Now" to open modal instead of jumping to #apply anchor
+    document.getElementById('navApplyBtn').addEventListener('click', e => { e.preventDefault(); openModal() })
+    document.getElementById('mobileApplyBtn').addEventListener('click', e => { e.preventDefault(); closeMobileNav(); openModal() })
+
+    submitApply.addEventListener('click', () => {
+      const name  = document.getElementById('applyName').value.trim()
+      const email = document.getElementById('applyEmail').value.trim()
+      if (!name || !email) {
+        document.getElementById('applyName').focus()
         return
       }
+      const goal = document.getElementById('applyGoal').value
+      const exp  = document.getElementById('applyExp').value
+      const msg  = document.getElementById('applyMsg').value.trim()
+      const subject = encodeURIComponent('Shiftwell Coaching Application — ' + name)
+      const body    = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nGoal: ${goal}\nExperience: ${exp}\n\n${msg}`)
+      window.location.href = `mailto:johnfrey.gabriel@gmail.com?subject=${subject}&body=${body}`
+      applyFormEl.style.display = 'none'
+      formSuccess.classList.add('show')
+    })
 
-      // Scroll-triggered reveal via IntersectionObserver
+    // ── FAQ accordion ─────────────────────────────────────────────────
+    document.querySelectorAll('.faq-q').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true'
+        // Close all
+        document.querySelectorAll('.faq-q').forEach(b => {
+          b.setAttribute('aria-expanded', 'false')
+          b.nextElementSibling.classList.remove('open')
+        })
+        // Toggle clicked
+        if (!expanded) {
+          btn.setAttribute('aria-expanded', 'true')
+          btn.nextElementSibling.classList.add('open')
+        }
+      })
+    })
+
+    // ── Interactive enhancements ──────────────────────────────────────
+    ;(function() {
+      const reduced  = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+      const revealEls = document.querySelectorAll('[data-reveal]')
+
+      if (reduced) { revealEls.forEach(el => el.classList.add('revealed')); return }
+
+      // Scroll-triggered reveal
       const revealObs = new IntersectionObserver((entries) => {
         entries.forEach(e => {
-          if (e.isIntersecting) {
-            e.target.classList.add('revealed')
-            revealObs.unobserve(e.target)
-          }
+          if (e.isIntersecting) { e.target.classList.add('revealed'); revealObs.unobserve(e.target) }
         })
       }, { threshold: 0.08 })
       revealEls.forEach(el => revealObs.observe(el))
 
-      // Animated counter for stats bar
+      // Counter animation — fires 650ms after stats bar enters view so reveal completes first
       function countUp(el, end, suffix, ms) {
         const t0 = performance.now()
         ;(function tick(now) {
-          const p = Math.min((now - t0) / ms, 1)
+          const p    = Math.min((now - t0) / ms, 1)
           const ease = 1 - Math.pow(1 - p, 3)
           el.textContent = Math.round(ease * end) + suffix
           if (p < 1) requestAnimationFrame(tick)
@@ -374,18 +610,20 @@
       const statsObs = new IntersectionObserver(([entry]) => {
         if (entry.isIntersecting && !statsRan) {
           statsRan = true
-          document.querySelectorAll('.stat-num').forEach(el => {
-            const raw = el.textContent.trim()
-            const num = parseFloat(raw)
-            const suffix = raw.replace(/[\d.]/g, '')
-            el.textContent = '0' + suffix
-            countUp(el, num, suffix, 1400)
-          })
+          setTimeout(() => {
+            document.querySelectorAll('.stat-num').forEach(el => {
+              const raw    = el.textContent.trim()
+              const num    = parseFloat(raw)
+              const suffix = raw.replace(/[\d.]/g, '')
+              el.textContent = '0' + suffix
+              countUp(el, num, suffix, 1200)
+            })
+          }, 650)
         }
       }, { threshold: 0.5 })
       statsObs.observe(document.querySelector('.stats-bar'))
 
-      // Active nav link tracking by scroll position
+      // Active nav link tracking
       const sections = document.querySelectorAll('section[id]')
       const navAs    = document.querySelectorAll('.nav-links a:not(.btn)')
       const secObs   = new IntersectionObserver((entries) => {
