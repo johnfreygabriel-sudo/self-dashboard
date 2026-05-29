@@ -749,6 +749,13 @@ body {
 .cp-num  { font-family: var(--font-h); font-size: 1.35rem; font-weight: 800; color: var(--text); line-height: 1; }
 .cp-lbl  { font-size: 0.6rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); }
 
+.coach-preview-logo {
+  width: 130px;
+  height: auto;
+  display: block;
+  border-radius: var(--radius);
+}
+
 .coach-taking-badge {
   font-size: 0.65rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
   background: var(--green-dim); color: var(--success);
@@ -804,6 +811,14 @@ body {
   inset: -7px;
   border-radius: 50%;
   border: 1px dashed rgba(181,169,154,.2);
+}
+
+.about-logo-img {
+  width: 220px;
+  height: auto;
+  display: block;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
 }
 
 .about-badge-stack { display: flex; flex-direction: column; gap: 0.45rem; align-items: center; }
