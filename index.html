@@ -24,10 +24,10 @@
         <a href="#process">Process</a>
         <a href="#pricing">Pricing</a>
         <a href="#faq">FAQ</a>
-        <a href="#apply" class="btn btn-sm" id="navApplyBtn">Apply Now</a>
+        <a href="#apply" class="btn btn-sm btn-primary" id="navApplyBtn">Apply Now</a>
       </nav>
       <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
-        <svg id="menuIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
           <line x1="3" y1="6" x2="21" y2="6"/>
           <line x1="3" y1="12" x2="21" y2="12"/>
           <line x1="3" y1="18" x2="21" y2="18"/>
@@ -39,7 +39,7 @@
       <a href="#process" onclick="closeMobileNav()">Process</a>
       <a href="#pricing" onclick="closeMobileNav()">Pricing</a>
       <a href="#faq" onclick="closeMobileNav()">FAQ</a>
-      <a href="#apply" class="btn btn-sm" id="mobileApplyBtn" onclick="closeMobileNav()">Apply Now</a>
+      <a href="#apply" class="btn btn-sm btn-primary" id="mobileApplyBtn" onclick="closeMobileNav()">Apply Now</a>
     </div>
   </header>
 
@@ -47,9 +47,9 @@
   <section class="hero">
     <div class="hero-inner">
       <div class="hero-text">
-        <div class="hero-eyebrow">— Online Fitness Coaching —</div>
+        <div class="hero-eyebrow">Online Fitness Coaching</div>
         <h1 class="hero-headline">
-          SHIFT YOUR BODY.<br>SHIFT YOUR <span class="accent">LIFE.</span>
+          SHIFT YOUR<br>BODY.<br>SHIFT YOUR<br><span class="accent">LIFE.</span>
         </h1>
         <p class="hero-sub">
           Personalised coaching built around your goals, your schedule, and your lifestyle — so you finally get the results you've been working toward.
@@ -65,18 +65,9 @@
           <div class="coach-preview-name">Coach John</div>
           <div class="coach-preview-title">Online Fitness Coach</div>
           <div class="coach-preview-stats">
-            <div class="cp-stat">
-              <span class="cp-num">200+</span>
-              <span class="cp-lbl">Clients</span>
-            </div>
-            <div class="cp-stat">
-              <span class="cp-num">5+</span>
-              <span class="cp-lbl">Years</span>
-            </div>
-            <div class="cp-stat">
-              <span class="cp-num">98%</span>
-              <span class="cp-lbl">Retention</span>
-            </div>
+            <div class="cp-stat"><span class="cp-num">200+</span><span class="cp-lbl">Clients</span></div>
+            <div class="cp-stat"><span class="cp-num">5+</span><span class="cp-lbl">Years</span></div>
+            <div class="cp-stat"><span class="cp-num">98%</span><span class="cp-lbl">Retention</span></div>
           </div>
           <div class="coach-taking-badge">Taking new clients</div>
         </div>
@@ -111,6 +102,34 @@
     </div>
   </div>
 
+  <!-- RESULTS / TRANSFORMATION -->
+  <section class="results" id="results">
+    <div class="container">
+      <div class="section-eyebrow" data-reveal>Real Results</div>
+      <h2 class="section-title" data-reveal data-delay="100">CLIENT<br>TRANSFORMATIONS</h2>
+      <div class="results-grid">
+        <div class="result-card" data-reveal>
+          <div class="result-metric">−12 kg</div>
+          <div class="result-period">in 90 days</div>
+          <div class="result-detail">Fat loss · Starter package</div>
+          <div class="result-client">Alex M.</div>
+        </div>
+        <div class="result-card" data-reveal data-delay="100">
+          <div class="result-metric">+8 kg</div>
+          <div class="result-period">lean muscle in 6 months</div>
+          <div class="result-detail">Muscle gain · Premium package</div>
+          <div class="result-client">James T.</div>
+        </div>
+        <div class="result-card" data-reveal data-delay="200">
+          <div class="result-metric">−10%</div>
+          <div class="result-period">body fat in 4 months</div>
+          <div class="result-detail">Recomposition · Elite package</div>
+          <div class="result-client">Sarah K.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ABOUT COACH -->
   <section class="about-coach" id="about-coach">
     <div class="container">
@@ -133,18 +152,9 @@
             My coaching philosophy is simple: understand your life first, then build a plan around it. Real accountability, real adjustments, and a direct line to me whenever you need it. No templates. No bots.
           </p>
           <div class="about-creds" data-reveal data-delay="400">
-            <div class="about-cred">
-              <span class="about-cred-num">200+</span>
-              <span class="about-cred-lbl">Clients Transformed</span>
-            </div>
-            <div class="about-cred">
-              <span class="about-cred-num">5+</span>
-              <span class="about-cred-lbl">Years Coaching</span>
-            </div>
-            <div class="about-cred">
-              <span class="about-cred-num">98%</span>
-              <span class="about-cred-lbl">Retention Rate</span>
-            </div>
+            <div class="about-cred"><span class="about-cred-num">200+</span><span class="about-cred-lbl">Clients Transformed</span></div>
+            <div class="about-cred"><span class="about-cred-num">5+</span><span class="about-cred-lbl">Years Coaching</span></div>
+            <div class="about-cred"><span class="about-cred-num">98%</span><span class="about-cred-lbl">Retention Rate</span></div>
           </div>
         </div>
       </div>
@@ -159,72 +169,54 @@
       <div class="features-grid">
 
         <div class="feature-card" data-reveal>
+          <span class="feature-card-num">01</span>
           <div class="feature-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M12 2L2 7l10 5 10-5-10-5z"/>
-              <path d="M2 17l10 5 10-5"/>
-              <path d="M2 12l10 5 10-5"/>
-            </svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
           </div>
           <h3>Fully Personalised</h3>
           <p>No cookie-cutter plans. Every program is built from scratch around your goals, schedule, and training history.</p>
         </div>
 
         <div class="feature-card" data-reveal data-delay="100">
+          <span class="feature-card-num">02</span>
           <div class="feature-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <circle cx="12" cy="12" r="10"/>
-              <polyline points="12 6 12 12 16 14"/>
-            </svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
           </div>
           <h3>Flexible Scheduling</h3>
           <p>Train on your time. Your plan adapts whether you have 3 days or 6 — it fits your life, not the other way around.</p>
         </div>
 
         <div class="feature-card" data-reveal data-delay="200">
+          <span class="feature-card-num">03</span>
           <div class="feature-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-              <circle cx="9" cy="7" r="4"/>
-              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-            </svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
           </div>
           <h3>Direct Coach Access</h3>
           <p>You work directly with your coach — not a bot, not a template. Real feedback and real accountability.</p>
         </div>
 
         <div class="feature-card" data-reveal data-delay="100">
+          <span class="feature-card-num">04</span>
           <div class="feature-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
-            </svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
           </div>
           <h3>Science-Backed Programming</h3>
           <p>Progressive overload principles that systematically push your limits and ensure you're always moving forward.</p>
         </div>
 
         <div class="feature-card" data-reveal data-delay="200">
+          <span class="feature-card-num">05</span>
           <div class="feature-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M18 8h1a4 4 0 0 1 0 8h-1"/>
-              <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/>
-              <line x1="6" y1="1" x2="6" y2="4"/>
-              <line x1="10" y1="1" x2="10" y2="4"/>
-              <line x1="14" y1="1" x2="14" y2="4"/>
-            </svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
           </div>
           <h3>Nutrition Coaching</h3>
           <p>Sustainable nutrition strategies — not crash diets. Learn to fuel your performance and feel your best every day.</p>
         </div>
 
         <div class="feature-card" data-reveal data-delay="300">
+          <span class="feature-card-num">06</span>
           <div class="feature-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <line x1="18" y1="20" x2="18" y2="10"/>
-              <line x1="12" y1="20" x2="12" y2="4"/>
-              <line x1="6" y1="20" x2="6" y2="14"/>
-            </svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
           </div>
           <h3>Measurable Progress</h3>
           <p>Weekly check-ins, progress tracking, and data-driven adjustments keep you on track toward your goal.</p>
@@ -240,7 +232,6 @@
       <div class="section-eyebrow" data-reveal>The Process</div>
       <h2 class="section-title" data-reveal data-delay="100">HOW IT WORKS</h2>
       <div class="steps">
-
         <div class="step" data-reveal>
           <div class="step-num">01</div>
           <div class="step-content">
@@ -248,14 +239,9 @@
             <p>Fill out a short application so I can understand your goals, training history, and what's held you back in the past.</p>
           </div>
         </div>
-
         <div class="step-arrow" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="5" y1="12" x2="19" y2="12"/>
-            <polyline points="12 5 19 12 12 19"/>
-          </svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </div>
-
         <div class="step" data-reveal data-delay="150">
           <div class="step-num">02</div>
           <div class="step-content">
@@ -263,14 +249,9 @@
             <p>We jump on a free call to map out your goals, confirm we're a great fit, and build a plan of attack together.</p>
           </div>
         </div>
-
         <div class="step-arrow" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="5" y1="12" x2="19" y2="12"/>
-            <polyline points="12 5 19 12 12 19"/>
-          </svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </div>
-
         <div class="step" data-reveal data-delay="300">
           <div class="step-num">03</div>
           <div class="step-content">
@@ -278,7 +259,6 @@
             <p>Your fully custom program goes live. Train, check in weekly, and watch your body transform with expert guidance every step of the way.</p>
           </div>
         </div>
-
       </div>
     </div>
   </section>
@@ -289,7 +269,6 @@
       <div class="section-eyebrow" data-reveal>Investment</div>
       <h2 class="section-title" data-reveal data-delay="100">COACHING PACKAGES</h2>
       <div class="pricing-grid">
-
         <div class="pricing-card" data-reveal>
           <div class="pricing-tier">Starter</div>
           <div class="pricing-price">$<span class="price-amount">149</span><span class="price-period">/mo</span></div>
@@ -302,7 +281,6 @@
           </ul>
           <button class="btn btn-outline open-modal">Apply Now</button>
         </div>
-
         <div class="pricing-card pricing-featured" data-reveal data-delay="100">
           <div class="pricing-badge">Most Popular</div>
           <div class="pricing-tier">Premium</div>
@@ -317,7 +295,6 @@
           </ul>
           <button class="btn btn-primary open-modal">Apply Now</button>
         </div>
-
         <div class="pricing-card" data-reveal data-delay="200">
           <div class="pricing-tier">Elite</div>
           <div class="pricing-price">$<span class="price-amount">349</span><span class="price-period">/mo</span></div>
@@ -331,7 +308,6 @@
           </ul>
           <button class="btn btn-outline open-modal">Apply Now</button>
         </div>
-
       </div>
     </div>
   </section>
@@ -344,8 +320,9 @@
       <div class="testimonials-grid">
 
         <div class="testimonial" data-reveal>
+          <div class="testimonial-quote-mark">"</div>
           <div class="testimonial-stars" aria-label="5 stars">★★★★★</div>
-          <p>"I've tried countless programs before Shiftwell. Within 3 months I dropped 12kg and finally feel confident in my own skin. The accountability is next level."</p>
+          <p>I've tried countless programs before Shiftwell. Within 3 months I dropped 12kg and finally feel confident in my own skin. The accountability is next level.</p>
           <div class="testimonial-header">
             <div class="testimonial-avatar">AM</div>
             <div class="testimonial-author">Alex M.</div>
@@ -353,8 +330,9 @@
         </div>
 
         <div class="testimonial" data-reveal data-delay="100">
+          <div class="testimonial-quote-mark">"</div>
           <div class="testimonial-stars" aria-label="5 stars">★★★★★</div>
-          <p>"The personalised approach made all the difference. My coach understood my busy schedule and built a plan that actually fit my life. Best investment I've made."</p>
+          <p>The personalised approach made all the difference. My coach understood my busy schedule and built a plan that actually fit my life. Best investment I've made.</p>
           <div class="testimonial-header">
             <div class="testimonial-avatar">SK</div>
             <div class="testimonial-author">Sarah K.</div>
@@ -362,8 +340,9 @@
         </div>
 
         <div class="testimonial" data-reveal data-delay="200">
+          <div class="testimonial-quote-mark">"</div>
           <div class="testimonial-stars" aria-label="5 stars">★★★★★</div>
-          <p>"Gained 8kg of lean muscle in 6 months with zero fluff — just consistent, structured training and smart nutrition. Couldn't have done it without this program."</p>
+          <p>Gained 8kg of lean muscle in 6 months with zero fluff — just consistent, structured training and smart nutrition. Couldn't have done it without this program.</p>
           <div class="testimonial-header">
             <div class="testimonial-avatar">JT</div>
             <div class="testimonial-author">James T.</div>
@@ -380,7 +359,6 @@
       <div class="section-eyebrow" data-reveal>FAQ</div>
       <h2 class="section-title" data-reveal data-delay="100">COMMON QUESTIONS</h2>
       <div class="faq-list" data-reveal data-delay="200">
-
         <div class="faq-item">
           <button class="faq-q" aria-expanded="false">
             How long is the minimum commitment?
@@ -388,7 +366,6 @@
           </button>
           <div class="faq-a">There's no lock-in contract — coaching is month-to-month. That said, most clients see the best results after 3–6 months of consistent work, so I recommend committing to at least 3 months to give the program time to work.</div>
         </div>
-
         <div class="faq-item">
           <button class="faq-q" aria-expanded="false">
             Do I need a gym membership or specific equipment?
@@ -396,7 +373,6 @@
           </button>
           <div class="faq-a">Not necessarily. Your program is built around whatever equipment you have access to — full gym, home gym, or just bodyweight. We'll make it work with what you've got.</div>
         </div>
-
         <div class="faq-item">
           <button class="faq-q" aria-expanded="false">
             How do weekly check-ins work?
@@ -404,15 +380,13 @@
           </button>
           <div class="faq-a">Each week you'll submit a short check-in covering your training, nutrition, sleep, and how you're feeling. I review every check-in personally and adjust your program if needed. You'll hear back from me within 24 hours.</div>
         </div>
-
         <div class="faq-item">
           <button class="faq-q" aria-expanded="false">
             What's the difference between the packages?
             <span class="faq-icon"><svg viewBox="0 0 12 12" aria-hidden="true"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg></span>
           </button>
-          <div class="faq-a">The main difference is the level of contact and support. Starter gives you a great foundation with weekly check-ins and email support. Premium adds direct messaging and video calls. Elite is full-access with daily check-ins, priority response, and weekly calls — best for those who want maximum accountability.</div>
+          <div class="faq-a">Starter gives you a solid foundation with weekly check-ins and email support. Premium adds direct messaging and bi-weekly video calls. Elite is full-access with daily check-ins, priority response, and weekly calls — best for maximum accountability.</div>
         </div>
-
         <div class="faq-item">
           <button class="faq-q" aria-expanded="false">
             Can I cancel at any time?
@@ -420,7 +394,6 @@
           </button>
           <div class="faq-a">Yes. Cancel any time with 7 days' notice before your next billing date. No questions asked, no penalties. I want you here because the coaching is working for you, not because you're locked in.</div>
         </div>
-
       </div>
     </div>
   </section>
@@ -431,7 +404,7 @@
       <div class="cta-inner" data-reveal>
         <img src="./logo.png" alt="Shiftwell" class="cta-logo"
           onerror="this.style.display='none'" />
-        <h2 class="cta-title">READY TO SHIFT?</h2>
+        <h2 class="cta-title">READY TO<br><span class="accent">SHIFT?</span></h2>
         <p class="cta-sub">Limited coaching spots available each month. Apply now and take the first step toward the body and life you want.</p>
         <button class="btn btn-primary btn-lg open-modal">Apply for Coaching</button>
       </div>
@@ -505,18 +478,16 @@
 
   <script>
     // ── Mobile nav with ☰ / ✕ toggle ─────────────────────────────────
-    const toggle  = document.getElementById('navToggle')
-    const mobile  = document.getElementById('navMobile')
-    const menuIcon = document.getElementById('menuIcon')
-    const hamSVG  = `<svg id="menuIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>`
-    const closeSVG = `<svg id="menuIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>`
+    const toggle   = document.getElementById('navToggle')
+    const mobile   = document.getElementById('navMobile')
+    const hamSVG   = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>`
+    const closeSVG = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>`
 
     toggle.addEventListener('click', () => {
       const open = mobile.classList.toggle('open')
       toggle.setAttribute('aria-expanded', open)
       toggle.innerHTML = open ? closeSVG : hamSVG
     })
-
     function closeMobileNav() {
       mobile.classList.remove('open')
       toggle.setAttribute('aria-expanded', false)
@@ -528,9 +499,9 @@
     window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 20), { passive: true })
 
     // ── Apply modal ───────────────────────────────────────────────────
-    const modal       = document.getElementById('applyModal')
-    const modalClose  = document.getElementById('modalClose')
-    const submitApply = document.getElementById('submitApply')
+    const modal      = document.getElementById('applyModal')
+    const modalClose = document.getElementById('modalClose')
+    const submitBtn  = document.getElementById('submitApply')
     const formSuccess = document.getElementById('formSuccess')
     const applyFormEl = document.getElementById('applyForm')
 
@@ -542,20 +513,16 @@
     modal.addEventListener('click', e => { if (e.target === modal) closeModal() })
     document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal() })
 
-    // Intercept "nav Apply Now" to open modal instead of jumping to #apply anchor
     document.getElementById('navApplyBtn').addEventListener('click', e => { e.preventDefault(); openModal() })
     document.getElementById('mobileApplyBtn').addEventListener('click', e => { e.preventDefault(); closeMobileNav(); openModal() })
 
-    submitApply.addEventListener('click', () => {
+    submitBtn.addEventListener('click', () => {
       const name  = document.getElementById('applyName').value.trim()
       const email = document.getElementById('applyEmail').value.trim()
-      if (!name || !email) {
-        document.getElementById('applyName').focus()
-        return
-      }
-      const goal = document.getElementById('applyGoal').value
-      const exp  = document.getElementById('applyExp').value
-      const msg  = document.getElementById('applyMsg').value.trim()
+      if (!name || !email) { document.getElementById('applyName').focus(); return }
+      const goal    = document.getElementById('applyGoal').value
+      const exp     = document.getElementById('applyExp').value
+      const msg     = document.getElementById('applyMsg').value.trim()
       const subject = encodeURIComponent('Shiftwell Coaching Application — ' + name)
       const body    = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nGoal: ${goal}\nExperience: ${exp}\n\n${msg}`)
       window.location.href = `mailto:johnfrey.gabriel@gmail.com?subject=${subject}&body=${body}`
@@ -567,12 +534,10 @@
     document.querySelectorAll('.faq-q').forEach(btn => {
       btn.addEventListener('click', () => {
         const expanded = btn.getAttribute('aria-expanded') === 'true'
-        // Close all
         document.querySelectorAll('.faq-q').forEach(b => {
           b.setAttribute('aria-expanded', 'false')
           b.nextElementSibling.classList.remove('open')
         })
-        // Toggle clicked
         if (!expanded) {
           btn.setAttribute('aria-expanded', 'true')
           btn.nextElementSibling.classList.add('open')
@@ -580,14 +545,13 @@
       })
     })
 
-    // ── Interactive enhancements ──────────────────────────────────────
+    // ── Scroll reveal + counter + active nav ──────────────────────────
     ;(function() {
-      const reduced  = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+      const reduced   = window.matchMedia('(prefers-reduced-motion: reduce)').matches
       const revealEls = document.querySelectorAll('[data-reveal]')
 
       if (reduced) { revealEls.forEach(el => el.classList.add('revealed')); return }
 
-      // Scroll-triggered reveal
       const revealObs = new IntersectionObserver((entries) => {
         entries.forEach(e => {
           if (e.isIntersecting) { e.target.classList.add('revealed'); revealObs.unobserve(e.target) }
@@ -595,11 +559,10 @@
       }, { threshold: 0.08 })
       revealEls.forEach(el => revealObs.observe(el))
 
-      // Counter animation — fires 650ms after stats bar enters view so reveal completes first
       function countUp(el, end, suffix, ms) {
         const t0 = performance.now()
         ;(function tick(now) {
-          const p    = Math.min((now - t0) / ms, 1)
+          const p = Math.min((now - t0) / ms, 1)
           const ease = 1 - Math.pow(1 - p, 3)
           el.textContent = Math.round(ease * end) + suffix
           if (p < 1) requestAnimationFrame(tick)
@@ -612,8 +575,8 @@
           statsRan = true
           setTimeout(() => {
             document.querySelectorAll('.stat-num').forEach(el => {
-              const raw    = el.textContent.trim()
-              const num    = parseFloat(raw)
+              const raw = el.textContent.trim()
+              const num = parseFloat(raw)
               const suffix = raw.replace(/[\d.]/g, '')
               el.textContent = '0' + suffix
               countUp(el, num, suffix, 1200)
@@ -623,7 +586,6 @@
       }, { threshold: 0.5 })
       statsObs.observe(document.querySelector('.stats-bar'))
 
-      // Active nav link tracking
       const sections = document.querySelectorAll('section[id]')
       const navAs    = document.querySelectorAll('.nav-links a:not(.btn)')
       const secObs   = new IntersectionObserver((entries) => {
