@@ -38,7 +38,7 @@ def draw(c):
     y -= 7 * mm
     c.setFillColor(MUTED)
     c.setFont("Helvetica", 10)
-    c.drawString(x, y, "22-day itinerary  ·  Osaka → Tokyo → Hakuba → Hakone → Kyoto → Osaka")
+    c.drawString(x, y, "16 Nov – 7 Dec 2026  ·  Osaka → Tokyo → Hakuba → Hakone → Kyoto → Osaka")
 
     y -= 5 * mm
     c.setStrokeColor(RULE)
@@ -59,21 +59,22 @@ def draw(c):
 
     # ── Left column: itinerary ──────────────────────────────────────
     rows = [
-        ("1", "Osaka",  "Day trips: Nara, Hiroshima", "5"),
-        ("2", "Tokyo",  "City, culture, food",        "5"),
-        ("3", "Hakuba", "Skiing",                      "3"),
-        ("4", "Hakone", "Mt. Fuji views",              "2"),
-        ("5", "Kyoto",  "Temples",                     "5"),
-        ("6", "Osaka",  "Return · fly home (KIX)",    "2"),
+        ("1", "Osaka",  "Day trips: Nara, Hiroshima", "5", "16–20 Nov"),
+        ("2", "Tokyo",  "City, culture, food",        "5", "21–25 Nov"),
+        ("3", "Hakuba", "Skiing",                      "3", "26–28 Nov"),
+        ("4", "Hakone", "Mt. Fuji views",              "2", "29–30 Nov"),
+        ("5", "Kyoto",  "Temples",                     "5", "1–5 Dec"),
+        ("6", "Osaka",  "Return · fly home (KIX)",    "2", "6–7 Dec"),
     ]
 
     col_x = x
     col_w = map_x - MARGIN - 12 * mm
     days_x = col_x + col_w
+    date_x = days_x - 18 * mm   # date column sits left of the days count
     row_h = 11.5 * mm
     ry = body_top
 
-    for i, (num, dest, note, days) in enumerate(rows):
+    for i, (num, dest, note, days, dates) in enumerate(rows):
         cell_top = ry
         cell_bottom = ry - row_h
 
@@ -82,7 +83,7 @@ def draw(c):
             c.rect(col_x - 3 * mm, cell_bottom, col_w + 3 * mm, row_h,
                    fill=1, stroke=0)
 
-        # order number (accent, light)
+        # order number (accent)
         c.setFillColor(ACCENT)
         c.setFont("Helvetica-Bold", 9)
         c.drawString(col_x, cell_top - 5.5 * mm, num)
@@ -97,7 +98,12 @@ def draw(c):
         c.setFont("Helvetica", 8.5)
         c.drawString(col_x + 7 * mm, cell_top - 10 * mm, note)
 
-        # days (right aligned)
+        # date range (right-aligned, muted)
+        c.setFillColor(MUTED)
+        c.setFont("Helvetica", 8)
+        c.drawRightString(date_x - 3 * mm, cell_top - 5.5 * mm, dates)
+
+        # days count (right aligned)
         c.setFillColor(INK)
         c.setFont("Helvetica-Bold", 11)
         c.drawRightString(days_x, cell_top - 5.5 * mm, days)
