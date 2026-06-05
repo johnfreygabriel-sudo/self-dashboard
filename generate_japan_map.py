@@ -53,6 +53,8 @@ ROUTE = [
     ("Hakone", 139.02, 35.23, "below"),
     ("Kyoto",  135.77, 35.01, "left"),
 ]
+# Return leg ends back at Osaka
+OSAKA_LON, OSAKA_LAT = 135.50, 34.69
 
 fig, ax = plt.subplots(figsize=(6, 6.4), dpi=300)
 fig.patch.set_facecolor(BG)
@@ -64,9 +66,9 @@ for poly in ISLANDS:
                          edgecolor=COAST, linewidth=1.1,
                          joinstyle="round", zorder=1))
 
-# Route line (dashed accent)
-rx = [c[1] for c in ROUTE]
-ry = [c[2] for c in ROUTE]
+# Route line (dashed accent) — includes return leg to Osaka
+rx = [c[1] for c in ROUTE] + [OSAKA_LON]
+ry = [c[2] for c in ROUTE] + [OSAKA_LAT]
 ax.plot(rx, ry, color=ACCENT, linewidth=1.8, linestyle=(0, (4, 3)),
         zorder=3, solid_capstyle="round")
 

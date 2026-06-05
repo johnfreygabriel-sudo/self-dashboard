@@ -38,7 +38,7 @@ def draw(c):
     y -= 7 * mm
     c.setFillColor(MUTED)
     c.setFont("Helvetica", 10)
-    c.drawString(x, y, "20-day itinerary  ·  Osaka → Tokyo → Hakuba → Hakone → Kyoto")
+    c.drawString(x, y, "22-day itinerary  ·  Osaka → Tokyo → Hakuba → Hakone → Kyoto → Osaka")
 
     y -= 5 * mm
     c.setStrokeColor(RULE)
@@ -61,15 +61,16 @@ def draw(c):
     rows = [
         ("1", "Osaka",  "Day trips: Nara, Hiroshima", "5"),
         ("2", "Tokyo",  "City, culture, food",        "5"),
-        ("3", "Hakuba", "Skiing",                       "3"),
-        ("4", "Hakone", "Mt. Fuji views",               "2"),
-        ("5", "Kyoto",  "Temples · fly home",           "5"),
+        ("3", "Hakuba", "Skiing",                      "3"),
+        ("4", "Hakone", "Mt. Fuji views",              "2"),
+        ("5", "Kyoto",  "Temples",                     "5"),
+        ("6", "Osaka",  "Return · fly home (KIX)",    "2"),
     ]
 
     col_x = x
     col_w = map_x - MARGIN - 12 * mm
     days_x = col_x + col_w
-    row_h = 13 * mm
+    row_h = 11.5 * mm
     ry = body_top
 
     for i, (num, dest, note, days) in enumerate(rows):
@@ -116,7 +117,7 @@ def draw(c):
     c.drawString(col_x, ry, "Total")
     c.setFillColor(ACCENT)
     c.setFont("Helvetica-Bold", 12)
-    c.drawRightString(days_x, ry, "20 days")
+    c.drawRightString(days_x, ry, "22 days")
 
     # ── Footer note ─────────────────────────────────────────────────
     fy = min(ry, map_y) - 12 * mm
@@ -127,7 +128,7 @@ def draw(c):
     c.setFillColor(MUTED)
     c.setFont("Helvetica", 8.5)
     c.drawString(x, fy - 1 * mm,
-                 "Fly in & out of Kansai Airport (KIX)  ·  Kyoto is 15 min from Kansai by train.")
+                 "Fly in & out of Kansai Airport (KIX)  ·  Osaka is 15 min from KIX by train.")
 
     c.setFont("Helvetica", 7)
     c.drawRightString(W - MARGIN, 12 * mm, "1")
@@ -135,7 +136,7 @@ def draw(c):
 
 out = os.path.join(HERE, "japan_trip.pdf")
 c = canvas.Canvas(out, pagesize=A4)
-c.setTitle("Japan Trip — 20 Days")
+c.setTitle("Japan Trip — 22 Days")
 c.setAuthor("Self Dashboard")
 draw(c)
 c.save()
